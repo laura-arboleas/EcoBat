@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cdn0v4h403xuk"]
+
+[ext_resource type="Texture2D" uid="uid://btgtc6h7nlagg" path="res://ejemplo.svg" id="1_0d2wr"]
+[ext_resource type="PackedScene" uid="uid://dvacy053l8c65" path="res://Jugador.tscn" id="2_bgojs"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_13qdw"]
+normal = Vector2(-0.16816485, -0.9857589)
+distance = -312.36243
+
+[node name="Juego" type="Node2D" unique_id=1491781558]
+
+[node name="Fondo" type="Node2D" parent="." unique_id=894719461]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Fondo" unique_id=468593239]
+
+[node name="Bordes" type="Node2D" parent="." unique_id=1022947473]
+
+[node name="Borde_inferior" type="StaticBody2D" parent="Bordes" unique_id=260094005]
+rotation = -1.5444391
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_inferior" unique_id=1909340313]
+position = Vector2(-158.58678, 4.212221)
+rotation = 1.7168465
+shape = SubResource("WorldBoundaryShape2D_13qdw")
+
+[node name="Borde_superior" type="StaticBody2D" parent="Bordes" unique_id=1308700911]
+rotation = -4.6842356
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_superior" unique_id=2056305084]
+position = Vector2(-158.58678, 4.212221)
+rotation = 1.7050884
+shape = SubResource("WorldBoundaryShape2D_13qdw")
+
+[node name="Obstaculos" type="Node2D" parent="." unique_id=782208644]
+
+[node name="Ejemplo" type="Sprite2D" parent="." unique_id=1508043438]
+texture = ExtResource("1_0d2wr")
+
+[node name="Jugador" parent="." unique_id=995713254 instance=ExtResource("2_bgojs")]
+position = Vector2(-562, 71.99999)
+rotation = 0.00026619434
