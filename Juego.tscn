@@ -36,6 +36,9 @@ shape = SubResource("WorldBoundaryShape2D_13qdw")
 [node name="Ejemplo" type="Sprite2D" parent="." unique_id=1508043438]
 texture = ExtResource("1_0d2wr")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
+color = Color(0.06798274, 0.06798274, 0.06798273, 1)
+
 [node name="Jugador" parent="." unique_id=995713254 instance=ExtResource("2_bgojs")]
 position = Vector2(-562, 71.99999)
 rotation = 0.00026619434

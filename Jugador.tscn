@@ -7,6 +7,16 @@
 radius = 21.988321
 height = 61.996597
 
+[sub_resource type="Gradient" id="Gradient_pfvk3"]
+offsets = PackedFloat32Array(0, 0.5552147, 0.9723926)
+colors = PackedColorArray(1, 1, 1, 1, 0.681388, 0.681388, 0.681388, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_13qdw"]
+gradient = SubResource("Gradient_pfvk3")
+fill = 1
+fill_from = Vector2(0.5164609, 0.52469134)
+fill_to = Vector2(0.8868313, 0.11728395)
+
 [node name="Jugador" type="CharacterBody2D" unique_id=995713254]
 script = ExtResource("1_pfvk3")
 
@@ -22,3 +32,8 @@ shape = SubResource("CapsuleShape2D_13qdw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=789283482]
 position = Vector2(228, 15)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=602070892]
+position = Vector2(7.6293945e-06, 4.7683716e-06)
+scale = Vector2(3.5937495, 3.0624998)
+texture = SubResource("GradientTexture2D_13qdw")
