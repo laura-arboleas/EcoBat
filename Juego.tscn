@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btgtc6h7nlagg" path="res://ejemplo.svg" id="1_0d2wr"]
 [ext_resource type="PackedScene" uid="uid://dvacy053l8c65" path="res://Jugador.tscn" id="2_bgojs"]
+[ext_resource type="PackedScene" uid="uid://bfwt8h0lolc8r" path="res://violeta.tscn" id="3_aio1g"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_13qdw"]
 normal = Vector2(-0.16816485, -0.9857589)
@@ -42,3 +43,6 @@ color = Color(0.06798274, 0.06798274, 0.06798273, 1)
 [node name="Jugador" parent="." unique_id=995713254 instance=ExtResource("2_bgojs")]
 position = Vector2(-562, 71.99999)
 rotation = 0.00026619434
+
+[node name="Area2D" parent="." unique_id=2013560160 instance=ExtResource("3_aio1g")]
+position = Vector2(-317, -57)
