@@ -1,11 +1,115 @@
 [gd_scene format=3 uid="uid://dvacy053l8c65"]
 
 [ext_resource type="Script" uid="uid://cdfo16e1ee2ks" path="res://jugador.gd" id="1_pfvk3"]
-[ext_resource type="Texture2D" uid="uid://2lghx3gqhhhf" path="res://ChatGPT Image 26 jul 2026, 13_25_54-Photoroom.png" id="2_pfvk3"]
+[ext_resource type="Texture2D" uid="uid://byyqst5fcqj1u" path="res://imagenes/choque spritesheet.png" id="2_ucnt4"]
+[ext_resource type="Texture2D" uid="uid://dy0jbjkeorg7v" path="res://imagenes/muercielago.png" id="3_ucnt4"]
+[ext_resource type="Texture2D" uid="uid://bdks0f3m7jm1x" path="res://imagenes/colgado.png" id="3_w2bje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg3ks"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1h6a"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5j21"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikhd1"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(2880, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_466xc"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(3840, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vwo7"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(4800, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rno6r"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(5760, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsch2"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(6720, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_defnh"]
+atlas = ExtResource("3_w2bje")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucnt4"]
+atlas = ExtResource("3_ucnt4")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2bje"]
+atlas = ExtResource("3_ucnt4")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pclxs"]
+atlas = ExtResource("3_ucnt4")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg3ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1h6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5j21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikhd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_466xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vwo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rno6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsch2")
+}],
+"loop": 1,
+"name": &"choque",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_defnh")
+}],
+"loop": 1,
+"name": &"colgado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_ucnt4")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_w2bje")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_pclxs")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
-radius = 21.988321
-height = 67.99965
+radius = 17.9967
+height = 62.01252
 
 [sub_resource type="Gradient" id="Gradient_pfvk3"]
 offsets = PackedFloat32Array(0, 0.5552147, 0.9723926)
@@ -20,13 +124,13 @@ fill_to = Vector2(0.8868313, 0.11728395)
 [node name="Jugador" type="CharacterBody2D" unique_id=995713254]
 script = ExtResource("1_pfvk3")
 
-[node name="ChatGptImage26Jul2026,132554Photoroom" type="Sprite2D" parent="." unique_id=16708217]
-rotation = -0.015168281
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_pfvk3")
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"choque"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994921225]
-position = Vector2(11, 3.0000002)
+position = Vector2(8.000001, -0.99999976)
 rotation = 1.574005
 shape = SubResource("CapsuleShape2D_13qdw")
 

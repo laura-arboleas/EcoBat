@@ -27,6 +27,7 @@ texture = ExtResource("1_84gfv")
 shape = SubResource("CircleShape2D_xrivr")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=225661169]
+visible = false
 position = Vector2(0, 0.49999952)
 scale = Vector2(1.03125, 0.984375)
 color = Color(0.63554597, 0.5557926, 1, 1)

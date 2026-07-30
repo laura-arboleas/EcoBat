@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dmggu2rsnv22v"]
+
+[ext_resource type="Texture2D" uid="uid://elyqve1ho1w1" path="res://imagenes/rama.png" id="1_grqsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(226, 20)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1011542782 groups=["rama"]]
+
+[node name="Rama" type="Sprite2D" parent="." unique_id=493764280]
+scale = Vector2(0.67391306, 0.64285713)
+texture = ExtResource("1_grqsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426519278]
+position = Vector2(-151, 15)
+shape = SubResource("RectangleShape2D_xrivr")
