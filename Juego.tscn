@@ -20,22 +20,16 @@ normal = Vector2(-0.99994093, 0.010868924)
 
 [node name="Juego" type="Node2D" unique_id=1491781558]
 
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=2014703928]
+repeat_size = Vector2(1920, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=230192850]
+position = Vector2(-756, -531)
+texture = ExtResource("1_aio1g")
+centered = false
+
 [node name="Fondo" type="Node2D" parent="." unique_id=894719461]
-
-[node name="Fondo2" type="Sprite2D" parent="Fondo" unique_id=767939092]
-position = Vector2(688.5, 90.5)
-scale = Vector2(2.0723958, 2.0416667)
-texture = ExtResource("1_aio1g")
-
-[node name="Fondo3" type="Sprite2D" parent="Fondo" unique_id=977109077]
-position = Vector2(4419.75, 90.25004)
-scale = Vector2(1.8143228, 2.0412037)
-texture = ExtResource("1_aio1g")
-
-[node name="Fondo4" type="Sprite2D" parent="Fondo" unique_id=806795484]
-position = Vector2(7984.2495, 90.49987)
-scale = Vector2(1.8992194, 2.0416665)
-texture = ExtResource("1_aio1g")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Fondo" unique_id=468593239]
 tile_set = SubResource("TileSet_xrivr")
@@ -43,47 +37,51 @@ tile_set = SubResource("TileSet_xrivr")
 [node name="Obstaculos" type="Node2D" parent="." unique_id=782208644]
 
 [node name="StaticBody2D" parent="Obstaculos" unique_id=1011542782 instance=ExtResource("2_sbve1")]
-position = Vector2(624, -533)
+position = Vector2(-1104, -228)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
 color = Color(0.06798274, 0.06798274, 0.06798273, 1)
-
-[node name="Jugador" parent="." unique_id=995713254 instance=ExtResource("2_bgojs")]
-position = Vector2(-562, 71.99999)
-rotation = 0.00026619434
-
-[node name="Area2D" parent="." unique_id=2013560160 instance=ExtResource("3_aio1g")]
-position = Vector2(310, 81)
 
 [node name="Bordes" type="Node2D" parent="." unique_id=1022947473]
 position = Vector2(3, 35)
 
 [node name="Borde_inferior" type="StaticBody2D" parent="Bordes" unique_id=260094005]
-position = Vector2(-465.00003, 331.00003)
+position = Vector2(-297.00006, 98.00006)
 rotation = -1.5444391
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_inferior" unique_id=1909340313]
-position = Vector2(-158.58678, 4.212221)
+position = Vector2(-4.0249786, -0.89422226)
 rotation = 1.7168465
 shape = SubResource("WorldBoundaryShape2D_13qdw")
 
 [node name="Borde_superior" type="StaticBody2D" parent="Bordes" unique_id=1308700911]
-position = Vector2(5.000004, -286.00003)
+position = Vector2(-60, -120.00001)
 rotation = -4.6842356
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_superior" unique_id=2056305084]
-position = Vector2(-158.58678, 4.212221)
+position = Vector2(-0.99954224, 0.028146267)
 rotation = 1.7050884
 shape = SubResource("WorldBoundaryShape2D_13qdw")
 
-[node name="Borde_derecho" type="StaticBody2D" parent="Bordes" unique_id=189986104]
+[node name="Borde_iz" type="StaticBody2D" parent="Bordes" unique_id=189986104]
+position = Vector2(-4012, -32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_derecho" unique_id=1480997715]
-position = Vector2(-1092, 99)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_iz" unique_id=1480997715]
+position = Vector2(7, -5)
 shape = SubResource("WorldBoundaryShape2D_xrivr")
 
-[node name="Borde_izquierdo" type="StaticBody2D" parent="Bordes" unique_id=1743207849]
-position = Vector2(9620, 424)
+[node name="Borde_Derecho" type="StaticBody2D" parent="Bordes" unique_id=1743207849]
+position = Vector2(3736, -26)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_izquierdo" unique_id=1847545077]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Borde_Derecho" unique_id=1847545077]
 shape = SubResource("WorldBoundaryShape2D_b1lj4")
+
+[node name="power-up" type="Node2D" parent="." unique_id=201560562]
+position = Vector2(310, 81)
+
+[node name="Area2D" parent="power-up" unique_id=2013560160 instance=ExtResource("3_aio1g")]
+
+[node name="Jugador" parent="." unique_id=995713254 instance=ExtResource("2_bgojs")]
+position = Vector2(-3638, 1)
+rotation = 0.00026619434
+scale = Vector2(0.99999994, 0.99999994)

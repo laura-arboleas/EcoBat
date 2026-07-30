@@ -35,8 +35,6 @@ func _physics_process(delta: float) -> void:
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	else:
-		velocity.y = 0
 		
 	if Input.is_action_just_pressed("ui_up"):
 		velocity.y = jump
@@ -70,6 +68,7 @@ func revisar_colisiones():
 	# Preguntamos si tocó cualquier otra cosa (borde del mapa)
 	if is_on_wall() or is_on_ceiling() or is_on_floor():
 		recibir_golpe()
+		
 
 func colgarse_de_rama():
 	if esta_colgado or esta_chocado:
@@ -80,14 +79,17 @@ func colgarse_de_rama():
 
 func recibir_golpe():
 	if esta_chocado:
+		esta_chocado = false
 		return
 		
 	esta_chocado = true
 	velocity = Vector2.ZERO 
 	$AnimatedSprite2D.play("choque")
 	await get_tree().create_timer(1.0).timeout
-	$AnimatedSprite2D.play("move")
 	esta_chocado = false
+	$AnimatedSprite2D.play("move")
+	
+	
 
 func agarrar_power():
 	energia += 15

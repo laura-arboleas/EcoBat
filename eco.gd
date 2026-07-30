@@ -4,7 +4,7 @@ extends Node2D
 @onready var ring = $Sprite2D
 
 const INITIAL_SCALE = 0.1
-const FINAL_SCALE = 25
+const FINAL_SCALE = 20
 const DURATION = 2
 
 const RING_COUNT = 3     

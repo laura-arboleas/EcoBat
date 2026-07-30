@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://byyqst5fcqj1u" path="res://imagenes/choque spritesheet.png" id="2_ucnt4"]
 [ext_resource type="Texture2D" uid="uid://dy0jbjkeorg7v" path="res://imagenes/muercielago.png" id="3_ucnt4"]
 [ext_resource type="Texture2D" uid="uid://bdks0f3m7jm1x" path="res://imagenes/colgado.png" id="3_w2bje"]
+[ext_resource type="Script" uid="uid://xabitrap68wl" path="res://camera.gd" id="5_pclxs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kg3ks"]
 atlas = ExtResource("2_ucnt4")
@@ -135,7 +136,8 @@ rotation = 1.574005
 shape = SubResource("CapsuleShape2D_13qdw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=789283482]
-position = Vector2(228, 15)
+position = Vector2(207, 0)
+script = ExtResource("5_pclxs")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=602070892]
 position = Vector2(7.6293945e-06, 4.7683716e-06)
