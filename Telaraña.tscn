@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://wypdc02o74j"]
+
+[ext_resource type="Texture2D" uid="uid://bj0sfcvwf0mte" path="res://imagenes/telaraña.png" id="1_qilkk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
+radius = 127.0
+height = 508.0
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1043079483]
+
+[node name="Telaraña" type="Sprite2D" parent="." unique_id=1835253697]
+texture = ExtResource("1_qilkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845440812]
+position = Vector2(1, 29)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_xrivr")
