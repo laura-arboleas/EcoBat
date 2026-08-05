@@ -1,7 +1,36 @@
 [gd_scene format=3 uid="uid://bfwt8h0lolc8r"]
 
-[ext_resource type="Texture2D" uid="uid://cl2tb4v4y0sye" path="res://bicho_violeta.png" id="1_84gfv"]
 [ext_resource type="Script" uid="uid://3bgdj4h78w4t" path="res://violeta.gd" id="1_mty2u"]
+[ext_resource type="Texture2D" uid="uid://iup54hw5058f" path="res://imagenes/bichito.png" id="2_mty2u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p643m"]
+atlas = ExtResource("2_mty2u")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6oob"]
+atlas = ExtResource("2_mty2u")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8pyy"]
+atlas = ExtResource("2_mty2u")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_p643m")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_t6oob")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_r8pyy")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 10.770329
@@ -13,24 +42,28 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 gradient = SubResource("Gradient_84gfv")
 fill = 1
 fill_from = Vector2(0.53004295, 0.50429183)
-fill_to = Vector2(0.99785405, 0.1137339)
+fill_to = Vector2(0.9306723, 0.17436975)
 
 [node name="violeta" type="Area2D" unique_id=2013560160]
 script = ExtResource("1_mty2u")
 
-[node name="BichoVioleta" type="Sprite2D" parent="." unique_id=2116501588]
-position = Vector2(0.9999995, -2.3841858e-07)
-scale = Vector2(0.50880283, 0.50864196)
-texture = ExtResource("1_84gfv")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1797816800]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1376574218]
 shape = SubResource("CircleShape2D_xrivr")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=225661169]
-visible = false
-position = Vector2(0, 0.49999952)
-scale = Vector2(1.03125, 0.984375)
+position = Vector2(-2, 0)
+scale = Vector2(2, 2)
 color = Color(0.63554597, 0.5557926, 1, 1)
 texture = SubResource("GradientTexture2D_xrivr")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=735855262]
+scale = Vector2(2, 2)
+rect = Rect2(-32.5, -33, 63.5, 66)
+enable_mode = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

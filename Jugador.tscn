@@ -97,13 +97,13 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.5,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_ucnt4")
 }, {
-"duration": 1.5,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_w2bje")
 }, {
-"duration": 1.5,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_pclxs")
 }],
 "loop": 1,
@@ -133,7 +133,7 @@ script = ExtResource("1_pfvk3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504]
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"choque"
+animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994921225]
 position = Vector2(8.000001, -0.99999976)

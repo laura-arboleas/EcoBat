@@ -1,20 +1,20 @@
-[gd_scene format=3 uid="uid://cd1evulgjspf5"]
+[gd_scene format=3 uid="uid://ddmows08kge4f"]
 
-[ext_resource type="Texture2D" uid="uid://iup54hw5058f" path="res://imagenes/bichito.png" id="1_rd184"]
-[ext_resource type="Script" uid="uid://dk2blns32xvhm" path="res://verde.gd" id="1_stwq8"]
+[ext_resource type="Script" uid="uid://d18or25fmfrot" path="res://naranja.gd" id="1_5ydqj"]
+[ext_resource type="Texture2D" uid="uid://iup54hw5058f" path="res://imagenes/bichito.png" id="2_s432p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_stwq8"]
-atlas = ExtResource("1_rd184")
+atlas = ExtResource("2_s432p")
 region = Rect2(0, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2184s"]
-atlas = ExtResource("1_rd184")
+atlas = ExtResource("2_s432p")
 region = Rect2(960, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qds2j"]
-atlas = ExtResource("1_rd184")
+atlas = ExtResource("2_s432p")
 region = Rect2(1920, 0, 960, 960)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_13qdw"]
@@ -34,17 +34,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_stwq8"]
+[sub_resource type="Gradient" id="Gradient_84gfv"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_2184s"]
-gradient = SubResource("Gradient_stwq8")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5ydqj"]
+gradient = SubResource("Gradient_84gfv")
 fill = 1
 fill_from = Vector2(0.53004295, 0.50429183)
 fill_to = Vector2(0.9306723, 0.17436975)
 
 [node name="Area2D" type="Area2D" unique_id=303398772]
-script = ExtResource("1_stwq8")
+script = ExtResource("1_5ydqj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1923926017]
 shape = SubResource("CircleShape2D_xrivr")
@@ -54,13 +54,13 @@ scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_13qdw")
 animation = &"move"
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=179300249]
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1515888476]
 position = Vector2(-2, 0)
 scale = Vector2(2, 2)
 color = Color(0.63554597, 0.5557926, 1, 1)
-texture = SubResource("GradientTexture2D_2184s")
+texture = SubResource("GradientTexture2D_5ydqj")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=493199304]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1520625616]
 scale = Vector2(2, 2)
 rect = Rect2(-32.5, -33, 63.5, 66)
 enable_mode = 1

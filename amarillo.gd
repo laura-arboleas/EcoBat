@@ -30,7 +30,8 @@ func _process(delta: float):
 	var intensidad_suave = (sin(tiempo * velocidad_pulso) + 1.0) / 2.0
 	luz.energy = intensidad_suave * energia_maxima_luz
 	
+	
 func _on_body_entered(body):
-	if body.has_method("modificar_vida"):
-		body.modificar_vida(25.0) # Le cura 25 de vida
+	if body.has_method("modificar_energia"):
+		body.modificar_energia(25.0) # Le cura 25 de energia
 		queue_free() 

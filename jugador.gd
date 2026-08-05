@@ -7,10 +7,9 @@ extends CharacterBody2D
 var esta_chocado = false
 var esta_colgado = false
 
-var speed = 250
-var speed_reverse = 140
-var gravity = 2000
-var jump = -350
+var speed = 350
+var speed_reverse = 250
+var gravity = 2500
 const Eco = preload("res://Eco.tscn")
 var cant_ecos = 2
 
@@ -45,9 +44,15 @@ func _physics_process(delta: float) -> void:
 	if esta_chocado:
 		return
 		
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction = Vector2(
+		Input.get_axis("ui_left", "ui_right"),
+		Input.get_axis("ui_up", "ui_down")
+	)
 	var direction_x = Input.get_axis("ui_left", "ui_right")
 	var current_speed = speed
+	velocity.x = direction.x * current_speed
+	velocity.y = direction.y * current_speed
+	
 	if controles_invertidos:
 		direction = direction * -1
 		
@@ -58,11 +63,13 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = direction * current_speed
 	
-	if not is_on_floor():
+	if not Input.is_action_just_pressed("ui_up"):
 		velocity.y += gravity * delta
 		
 	if Input.is_action_just_pressed("ui_up"):
-		velocity.y = jump
+		velocity.y = speed
+
+		
 	if energia_actual == 100:
 		cant_ecos = 2
 	if Input.is_action_just_pressed("Eco"):
