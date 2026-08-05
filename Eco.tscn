@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://kta52uljgt1u"]
+
+[ext_resource type="Script" uid="uid://bdscbn7k5taw" path="res://eco.gd" id="1_lmk47"]
+[ext_resource type="Texture2D" uid="uid://c71cqxg4oamy" path="res://imagenes/Aro_blanco.png" id="2_1u20r"]
+
+[sub_resource type="Gradient" id="Gradient_lmk47"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_13qdw"]
+gradient = SubResource("Gradient_lmk47")
+fill = 1
+fill_from = Vector2(0.5044843, 0.5134529)
+fill_to = Vector2(0.87219733, 0.11883408)
+
+[node name="Eco" type="Node2D" unique_id=693420535]
+script = ExtResource("1_lmk47")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736558094]
+position = Vector2(21, 29)
+texture = ExtResource("2_1u20r")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=396679185]
+texture = SubResource("GradientTexture2D_13qdw")
+
+[node name="Timer" type="Timer" parent="." unique_id=85045456]

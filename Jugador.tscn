@@ -1,11 +1,119 @@
 [gd_scene format=3 uid="uid://dvacy053l8c65"]
 
 [ext_resource type="Script" uid="uid://cdfo16e1ee2ks" path="res://jugador.gd" id="1_pfvk3"]
-[ext_resource type="Texture2D" uid="uid://2lghx3gqhhhf" path="res://ChatGPT Image 26 jul 2026, 13_25_54-Photoroom.png" id="2_pfvk3"]
+[ext_resource type="Texture2D" uid="uid://byyqst5fcqj1u" path="res://imagenes/choque spritesheet.png" id="2_ucnt4"]
+[ext_resource type="Texture2D" uid="uid://dy0jbjkeorg7v" path="res://imagenes/muercielago.png" id="3_ucnt4"]
+[ext_resource type="Texture2D" uid="uid://bdks0f3m7jm1x" path="res://imagenes/colgado.png" id="3_w2bje"]
+[ext_resource type="Script" uid="uid://xabitrap68wl" path="res://camera.gd" id="5_pclxs"]
+[ext_resource type="Texture2D" uid="uid://c0nnxkp8uvdaa" path="res://imagenes/Eco_habilidad-Photoroom (2).png" id="6_kg3ks"]
+[ext_resource type="Texture2D" uid="uid://c0ubo7i83suhu" path="res://imagenes/arriba-eco.png" id="7_v1h6a"]
+[ext_resource type="Texture2D" uid="uid://cyhjgsk6dncm7" path="res://imagenes/fondo.png" id="8_g5j21"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg3ks"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1h6a"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5j21"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikhd1"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(2880, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_466xc"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(3840, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vwo7"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(4800, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rno6r"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(5760, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsch2"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(6720, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_defnh"]
+atlas = ExtResource("3_w2bje")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucnt4"]
+atlas = ExtResource("3_ucnt4")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2bje"]
+atlas = ExtResource("3_ucnt4")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pclxs"]
+atlas = ExtResource("3_ucnt4")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg3ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1h6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5j21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikhd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_466xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vwo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rno6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsch2")
+}],
+"loop": 1,
+"name": &"choque",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_defnh")
+}],
+"loop": 1,
+"name": &"colgado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_ucnt4")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_w2bje")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_pclxs")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
-radius = 21.988321
-height = 67.99965
+radius = 49.00296
+height = 145.9864
 
 [sub_resource type="Gradient" id="Gradient_pfvk3"]
 offsets = PackedFloat32Array(0, 0.5552147, 0.9723926)
@@ -14,26 +122,69 @@ colors = PackedColorArray(1, 1, 1, 1, 0.681388, 0.681388, 0.681388, 1, 0, 0, 0, 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_13qdw"]
 gradient = SubResource("Gradient_pfvk3")
 fill = 1
-fill_from = Vector2(0.5164609, 0.52469134)
-fill_to = Vector2(0.8868313, 0.11728395)
+fill_from = Vector2(0.52047783, 0.5)
+fill_to = Vector2(0.95051193, 0.2440273)
+
+[sub_resource type="Theme" id="Theme_v1h6a"]
 
 [node name="Jugador" type="CharacterBody2D" unique_id=995713254]
 script = ExtResource("1_pfvk3")
 
-[node name="ChatGptImage26Jul2026,132554Photoroom" type="Sprite2D" parent="." unique_id=16708217]
-rotation = -0.015168281
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_pfvk3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994921225]
-position = Vector2(11, 3.0000002)
+position = Vector2(8.000001, -0.99999976)
 rotation = 1.574005
 shape = SubResource("CapsuleShape2D_13qdw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=789283482]
-position = Vector2(228, 15)
+position = Vector2(207, 0)
+script = ExtResource("5_pclxs")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=602070892]
-position = Vector2(7.6293945e-06, 4.7683716e-06)
-scale = Vector2(3.5937495, 3.0624998)
+position = Vector2(-8.93751, -9.536743e-07)
+scale = Vector2(5.9707036, 4.796875)
 texture = SubResource("GradientTexture2D_13qdw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1190772087]
+
+[node name="BarraEnergia" type="ProgressBar" parent="CanvasLayer" unique_id=2057309066]
+modulate = Color(0.75782734, 0.6632077, 1, 1)
+self_modulate = Color(0.63554597, 0.5557926, 1, 1)
+offset_left = 13.0
+offset_top = 1021.0
+offset_right = 428.0
+offset_bottom = 1064.0
+theme = SubResource("Theme_v1h6a")
+
+[node name="CirculoEco" type="CanvasLayer" parent="." unique_id=113636276]
+
+[node name="Circulo_Eco" type="TextureProgressBar" parent="CirculoEco" unique_id=1747429997]
+offset_left = 439.0
+offset_top = 1011.0001
+offset_right = 1844.0
+offset_bottom = 2135.0
+scale = Vector2(0.049232755, 0.048078246)
+fill_mode = 8
+texture_under = ExtResource("6_kg3ks")
+texture_progress = ExtResource("7_v1h6a")
+
+[node name="BarraVida" type="CanvasLayer" parent="." unique_id=335027679]
+
+[node name="TextureRect" type="TextureRect" parent="BarraVida" unique_id=796251902]
+visible = false
+offset_left = 16.000004
+offset_top = 1003.00006
+offset_right = 1936.0
+offset_bottom = 2083.0
+scale = Vector2(0.21270156, -0.027194047)
+texture = ExtResource("8_g5j21")
+
+[node name="ProgressBar" type="ProgressBar" parent="BarraVida" unique_id=1837480751]
+offset_left = 16.0
+offset_top = 974.0
+offset_right = 424.0
+offset_bottom = 1003.0

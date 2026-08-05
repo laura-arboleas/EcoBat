@@ -31,6 +31,6 @@ func _process(delta: float):
 	luz.energy = intensidad_suave * energia_maxima_luz
 	
 func _on_body_entered(body):
-	if body.has_method("modificar_vida"):
-		body.modificar_vida(25.0) # Le cura 25 de vida
-		queue_free() 
+	if body.has_method("aplicar_veneno"):
+		body.aplicar_veneno(10.0) 
+		queue_free()

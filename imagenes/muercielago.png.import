@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btgtc6h7nlagg"
-path="res://.godot/imported/ejemplo.svg-c4ab0150186406e151c9ea0dfbaaf8c4.ctex"
+uid="uid://dy0jbjkeorg7v"
+path="res://.godot/imported/muercielago.png-ae2dcb75a84a59afdb77f92833b8bbf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ejemplo.svg"
-dest_files=["res://.godot/imported/ejemplo.svg-c4ab0150186406e151c9ea0dfbaaf8c4.ctex"]
+source_file="res://imagenes/muercielago.png"
+dest_files=["res://.godot/imported/muercielago.png-ae2dcb75a84a59afdb77f92833b8bbf7.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
