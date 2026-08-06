@@ -13,4 +13,4 @@ func _on_body_entered(body):
 
 func cambiar_pantalla():
 	print("¡Nivel superado!")
-	# get_tree().change_scene_to_file(siguiente_nivel)
+	get_tree().change_scene_to_file("res://Victoria.tscn")

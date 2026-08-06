@@ -11,14 +11,13 @@ var speed = 350
 var speed_reverse = 250
 var gravity = 2500
 const Eco = preload("res://Eco.tscn")
-var cant_ecos = 2
 
 var energia_maxima = 100.0
 var energia_actual = 100.0
-var carga_pasiva = 2.5 
+var resta_pasiva = 1.5
 var vida_maxima = 100.0
 var vida_actual = 100.0
-var costo_eco = 50.0 
+var costo_eco = 20.0 
 var recarga_colgado = 5.0
 
 var tiene_escudo = false
@@ -81,11 +80,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = direction.y * current_speed
 		
-	if energia_actual == 100:
-		cant_ecos = 2
 	if Input.is_action_just_pressed("Eco"):
-		if carga_actual_eco >= tiempo_carga_eco and energia_actual >= costo_eco and cant_ecos > 0:
-			cant_ecos = cant_ecos -1 
+		if carga_actual_eco >= tiempo_carga_eco and energia_actual >= costo_eco:
 			usar_ecolocalizacion()
 	move_and_slide ()
 	
@@ -151,13 +147,11 @@ func gestion_energia(delta):
 			energia_actual += recarga_colgado * delta
 	else:
 		if energia_actual > 0:
-			energia_actual += carga_pasiva * delta
+			energia_actual -= resta_pasiva * delta
 
 	if carga_actual_eco < tiempo_carga_eco:
 		carga_actual_eco += delta
 	
-	
-
 	energia_actual = clamp(energia_actual, 0, energia_maxima)
 	carga_actual_eco = clamp(carga_actual_eco, 0, tiempo_carga_eco)
 
