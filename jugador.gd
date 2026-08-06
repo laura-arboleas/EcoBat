@@ -14,11 +14,11 @@ const Eco = preload("res://Eco.tscn")
 
 var energia_maxima = 100.0
 var energia_actual = 100.0
-var resta_pasiva = 1.5
+var resta_pasiva = 1.7
 var vida_maxima = 100.0
 var vida_actual = 100.0
 var costo_eco = 20.0 
-var recarga_colgado = 5.0
+var recarga_colgado = 10.0
 
 var tiene_escudo = false
 var controles_invertidos = false
