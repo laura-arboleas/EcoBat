@@ -27,12 +27,21 @@ var controles_invertidos = false
 var tiempo_carga_eco = 10.0
 var carga_actual_eco = 10.0
 
+var temporizador_piso = 0.0
+var intervalo_dano_piso = 0.5
+var controles_bloqueados = false
+
 func _ready() -> void:
 	barra_energia.max_value = energia_maxima
 	barra_vida.max_value = vida_maxima
 	circulo_eco.max_value = tiempo_carga_eco
 
 func _physics_process(delta: float) -> void:	
+	if controles_bloqueados:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+		
 	gestion_energia(delta)
 	if esta_colgado:
 		if Input.is_action_just_pressed("ui_down") or Input.is_action_just_pressed("ui_up"):
@@ -40,35 +49,37 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.play("move")
 		else:
 			return
-
-	if esta_chocado:
+	
+	if not esta_chocado:
+		$AnimatedSprite2D.play("move")
+	else:
 		return
 		
 	var direction = Vector2(
 		Input.get_axis("ui_left", "ui_right"),
 		Input.get_axis("ui_up", "ui_down")
 	)
-	var direction_x = Input.get_axis("ui_left", "ui_right")
 	var current_speed = speed
-	velocity.x = direction.x * current_speed
-	velocity.y = direction.y * current_speed
 	
 	if controles_invertidos:
-		direction = direction * -1
-		
-	if direction_x > 0:
-		current_speed = speed
-	elif direction_x < 0:
+		direction.x *= -1
+		direction.y *= -1
+	
+	if direction.x >= 0:
+		if direction.x == 0 and $AnimatedSprite2D.flip_h == true:
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
 		current_speed = speed_reverse
-	
-	velocity = direction * current_speed
-	
-	if not Input.is_action_just_pressed("ui_up"):
-		velocity.y += gravity * delta
-		
-	if Input.is_action_just_pressed("ui_up"):
-		velocity.y = speed
 
+	velocity.x = direction.x * current_speed
+	
+	if direction.y == 0:
+		velocity.y = gravity * delta
+	else:
+		velocity.y = direction.y * current_speed
 		
 	if energia_actual == 100:
 		cant_ecos = 2
@@ -76,34 +87,35 @@ func _physics_process(delta: float) -> void:
 		if carga_actual_eco >= tiempo_carga_eco and energia_actual >= costo_eco and cant_ecos > 0:
 			cant_ecos = cant_ecos -1 
 			usar_ecolocalizacion()
-	
-	if direction != Vector2.ZERO:
-		$AnimatedSprite2D.play("move")
-		if direction.x >= 0:
-			$AnimatedSprite2D.flip_h = false
-		else:
-			$AnimatedSprite2D.flip_h = true
-			
 	move_and_slide ()
 	
-	revisar_colisiones()
+	if is_on_floor():
+		temporizador_piso += delta 
+		if temporizador_piso >= intervalo_dano_piso:
+			modificar_vida(-1) 
+			temporizador_piso = 0.0
+	else:
+		temporizador_piso = 0.0
 
+	revisar_colisiones()
 
 func revisar_colisiones():
 	# get_slide_collision_count() nos dice cuántas cosas tocamos en este frame
 	for i in get_slide_collision_count():
 		var colision = get_slide_collision(i)
-		var objeto_tocado = colision.get_collider()
+		var objeto_tocado = colision.get_collider() 
 
-		if objeto_tocado.is_in_group("rama"):
+		if objeto_tocado.is_in_group("trampa"):
+			if "dano" in objeto_tocado:
+				modificar_vida(-objeto_tocado.dano)
+				recibir_golpe() 
+				return 
+				
+		# 2. Si chocamos con objetos individuales (ramas)
+		elif objeto_tocado.is_in_group("rama"):
 			colgarse_de_rama()
-			return 
+			return
 
-	#  NO tocó una rama. 
-	# Preguntamos si tocó cualquier otra cosa (borde del mapa)
-	if is_on_wall() or is_on_ceiling() or is_on_floor():
-		recibir_golpe()
-		
 
 func colgarse_de_rama():
 	if esta_colgado or esta_chocado:
@@ -121,9 +133,6 @@ func recibir_golpe():
 	if esta_chocado:
 		esta_chocado = false
 		return
-
-	modificar_vida(-15) 
-
 	esta_chocado = true
 	velocity = Vector2.ZERO 
 	$AnimatedSprite2D.play("choque")
@@ -168,7 +177,7 @@ func usar_ecolocalizacion():
 func modificar_vida(cantidad: int):
 	vida_actual += cantidad
 	vida_actual = clamp(vida_actual, 0, vida_maxima)
-	
+	barra_vida.value = vida_actual
 	if vida_actual <= 0:
 		morir()
 
@@ -189,4 +198,6 @@ func aplicar_veneno(duracion: float):
 func morir():
 	print("Game Over")
 	# Aquí puedes reiniciar la escena: get_tree().reload_current_scene()
-	
+
+func ganar_nivel():
+	controles_bloqueados = true

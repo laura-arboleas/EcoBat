@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bawx8viqhbc3v"]
+
+[ext_resource type="Script" uid="uid://c7vvg3al5h750" path="res://meta_victoria.gd" id="1_h8ywy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 163.35544
+
+[sub_resource type="Gradient" id="Gradient_h8ywy"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xrivr"]
+gradient = SubResource("Gradient_h8ywy")
+fill = 1
+fill_from = Vector2(0.75102884, 0.5123457)
+fill_to = Vector2(0.17901234, 0.047325104)
+
+[node name="Area2D" type="Area2D" unique_id=108073805]
+script = ExtResource("1_h8ywy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767087115 groups=["final"]]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1982188302]
+position = Vector2(-541, 0)
+scale = Vector2(17, 17)
+texture = SubResource("GradientTexture2D_xrivr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://bfwt8h0lolc8r"]
 
 [ext_resource type="Script" uid="uid://3bgdj4h78w4t" path="res://violeta.gd" id="1_mty2u"]
-[ext_resource type="Texture2D" uid="uid://iup54hw5058f" path="res://imagenes/bichito.png" id="2_mty2u"]
+[ext_resource type="Texture2D" uid="uid://dco08wmam0r2y" path="res://imagenes/bichito violeta.png" id="2_mty2u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p643m"]
 atlas = ExtResource("2_mty2u")
-region = Rect2(0, 0, 960, 960)
+region = Rect2(0, 0, 100, 50)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6oob"]
 atlas = ExtResource("2_mty2u")
-region = Rect2(960, 0, 960, 960)
+region = Rect2(100, 0, 100, 50)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r8pyy"]
 atlas = ExtResource("2_mty2u")
-region = Rect2(1920, 0, 960, 960)
+region = Rect2(200, 0, 100, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
 animations = [{
@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
-radius = 10.770329
+radius = 20.024984
 
 [sub_resource type="Gradient" id="Gradient_84gfv"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -48,7 +48,6 @@ fill_to = Vector2(0.9306723, 0.17436975)
 script = ExtResource("1_mty2u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1797816800]
-scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"move"
 

@@ -1,38 +1,40 @@
 [gd_scene format=3 uid="uid://cjn044ue6rt43"]
 
 [ext_resource type="Script" uid="uid://bkojv1o72fwp2" path="res://amarillo.gd" id="1_7nl0x"]
-[ext_resource type="Texture2D" uid="uid://iup54hw5058f" path="res://imagenes/bichito.png" id="2_y1efg"]
+[ext_resource type="Texture2D" uid="uid://cp3bjst6fnk01" path="res://imagenes/bichito amarillo.png" id="2_7nl0x"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1efg"]
+atlas = ExtResource("2_7nl0x")
+region = Rect2(0, 0, 100, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_stwq8"]
-atlas = ExtResource("2_y1efg")
-region = Rect2(0, 0, 960, 960)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul37t"]
+atlas = ExtResource("2_7nl0x")
+region = Rect2(100, 0, 100, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2184s"]
-atlas = ExtResource("2_y1efg")
-region = Rect2(960, 0, 960, 960)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qds2j"]
-atlas = ExtResource("2_y1efg")
-region = Rect2(1920, 0, 960, 960)
+[sub_resource type="AtlasTexture" id="AtlasTexture_knw8h"]
+atlas = ExtResource("2_7nl0x")
+region = Rect2(200, 0, 100, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_13qdw"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_stwq8")
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_y1efg")
 }, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2184s")
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ul37t")
 }, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qds2j")
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_knw8h")
 }],
 "loop": 1,
 "name": &"move",
 "speed": 5.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
+radius = 15.0
+height = 64.0
 
 [sub_resource type="Gradient" id="Gradient_7nl0x"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -46,18 +48,18 @@ fill_to = Vector2(0.9306723, 0.17436975)
 [node name="Area2D" type="Area2D" unique_id=303398772]
 script = ExtResource("1_7nl0x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1923926017]
-shape = SubResource("CircleShape2D_xrivr")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028552361]
-scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_13qdw")
 animation = &"move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1923926017]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_13qdw")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=212482169]
 position = Vector2(-2, 0)
 scale = Vector2(2, 2)
-color = Color(0.63554597, 0.5557926, 1, 1)
+color = Color(0.76981527, 0.59797424, 0.44168767, 1)
 texture = SubResource("GradientTexture2D_y1efg")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=959632232]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dlgqeu23n0pm1"]
+
+[ext_resource type="Script" uid="uid://baxbf47f65pr4" path="res://pinchos_altos.gd" id="1_durmc"]
+[ext_resource type="Texture2D" uid="uid://dwr5klchjxnx3" path="res://imagenes/otros pinchos.png" id="1_dwc0v"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1964254288 groups=["trampa"]]
+script = ExtResource("1_durmc")
+
+[node name="Pinchos" type="Sprite2D" parent="." unique_id=1405947337]
+texture = ExtResource("1_dwc0v")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1574524971]
+polygon = PackedVector2Array(-11, -150, -11, -150, 10, -107, 32, -11, 37, -15, 50, -58, 62, -16, 72, -19, 94, -96, 112, -58, 114, -19, 121, -19, 121, 151, -121, 149, -118, -17, -112, -15, -102, -48, -78, -90, -55, -22, -43, -22, -21, -134, -11, -151)

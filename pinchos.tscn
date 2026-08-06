@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://xi5mceotlt85"]
 
+[ext_resource type="Script" uid="uid://dy56u3fn3mtxk" path="res://pinchos.gd" id="1_i3k25"]
 [ext_resource type="Texture2D" uid="uid://dilototmu6rxa" path="res://imagenes/pinchos.png" id="1_kofkl"]
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1964254288]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1964254288 groups=["trampa"]]
+script = ExtResource("1_i3k25")
 
 [node name="Pinchos" type="Sprite2D" parent="." unique_id=1405947337]
 texture = ExtResource("1_kofkl")
