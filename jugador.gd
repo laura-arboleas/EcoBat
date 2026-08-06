@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var circulo_eco = $CirculoEco/Circulo_Eco
 @onready var barra_vida = $BarraVida/ProgressBar
 
+var checkpoint_position: Vector2
 var esta_chocado = false
 var esta_colgado = false
 
@@ -31,6 +32,8 @@ var intervalo_dano_piso = 0.5
 var controles_bloqueados = false
 
 func _ready() -> void:
+	checkpoint_position = global_position
+	
 	barra_energia.max_value = energia_maxima
 	barra_vida.max_value = vida_maxima
 	circulo_eco.max_value = tiempo_carga_eco
@@ -42,6 +45,11 @@ func _physics_process(delta: float) -> void:
 		return
 		
 	gestion_energia(delta)
+	
+	if energia_actual <= 0:
+		await sin_energia()
+		return
+	
 	if esta_colgado:
 		if Input.is_action_just_pressed("ui_down") or Input.is_action_just_pressed("ui_up"):
 			esta_colgado = false
@@ -103,14 +111,9 @@ func revisar_colisiones():
 
 		if objeto_tocado.is_in_group("trampa"):
 			if "dano" in objeto_tocado:
-				modificar_vida(-objeto_tocado.dano)
 				recibir_golpe() 
+				modificar_vida(-objeto_tocado.dano)
 				return 
-				
-		# 2. Si chocamos con objetos individuales (ramas)
-		elif objeto_tocado.is_in_group("rama"):
-			colgarse_de_rama()
-			return
 
 
 func colgarse_de_rama():
@@ -191,7 +194,26 @@ func aplicar_veneno(duracion: float):
 
 func morir():
 	print("Game Over")
-	# Aquí puedes reiniciar la escena: get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Derrota.tscn")
 
 func ganar_nivel():
 	controles_bloqueados = true
+	
+func sin_energia():
+	controles_bloqueados = true
+
+	# Mostrar cartel
+	$CanvasLayer2/Mensaje.text = "Te quedaste sin energía"
+	$CanvasLayer2.visible = true
+
+	# Esperar
+	await get_tree().create_timer(2.0).timeout
+
+	global_position = checkpoint_position
+
+	energia_actual = energia_maxima
+	barra_energia.value = energia_actual
+
+	$CanvasLayer2.visible = false
+
+	controles_bloqueados = false
