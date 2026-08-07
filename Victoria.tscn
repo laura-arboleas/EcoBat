@@ -27,17 +27,17 @@ texture = ExtResource("1_xtg27")
 [node name="Boton Salir" type="TextureButton" parent="." unique_id=1972737972]
 layout_mode = 0
 offset_left = 91.0
-offset_top = 838.0
+offset_top = 833.0
 offset_right = 451.0
-offset_bottom = 958.0
+offset_bottom = 953.0
 texture_normal = ExtResource("2_pad2k")
 texture_pressed = ExtResource("3_bl21q")
 
 [node name="Boton Siguiente Nivel" type="TextureButton" parent="." unique_id=1757257932]
 layout_mode = 0
-offset_left = 352.0
+offset_left = 363.0
 offset_top = 665.0
-offset_right = 712.0
+offset_right = 723.0
 offset_bottom = 785.0
 texture_normal = ExtResource("5_pad2k")
 texture_pressed = ExtResource("6_bl21q")
@@ -45,9 +45,9 @@ texture_pressed = ExtResource("6_bl21q")
 [node name="MenuPrincipal" type="TextureButton" parent="." unique_id=1203150103]
 layout_mode = 0
 offset_left = 644.0
-offset_top = 823.0
+offset_top = 833.0
 offset_right = 1004.0
-offset_bottom = 943.0
+offset_bottom = 953.0
 texture_normal = ExtResource("7_gvs5y")
 texture_pressed = ExtResource("8_67kmo")
 

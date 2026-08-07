@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dswrbv1tlhujw"]
+
+[ext_resource type="Script" uid="uid://cojexk0171mh1" path="res://ayuda.gd" id="1_j5q7l"]
+[ext_resource type="Texture2D" uid="uid://cdohs1f25bmgs" path="res://imagenes/pantalla ayuda.png" id="1_w45k5"]
+[ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="2_j5q7l"]
+[ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="3_vspjj"]
+
+[node name="Control" type="Control" unique_id=1891504848]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j5q7l")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1883676383]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_w45k5")
+
+[node name="Volver" type="TextureButton" parent="." unique_id=648349587]
+layout_mode = 0
+offset_left = 1541.0
+offset_top = 942.0
+offset_right = 1901.0
+offset_bottom = 1062.0
+texture_normal = ExtResource("2_j5q7l")
+texture_pressed = ExtResource("3_vspjj")
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

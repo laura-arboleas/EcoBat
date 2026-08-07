@@ -15,7 +15,7 @@ const Eco = preload("res://Eco.tscn")
 
 var energia_maxima = 100.0
 var energia_actual = 100.0
-var resta_pasiva = 1.7
+var resta_pasiva = 1.8
 var vida_maxima = 100.0
 var vida_actual = 100.0
 var costo_eco = 20.0 
@@ -31,9 +31,11 @@ var temporizador_piso = 0.0
 var intervalo_dano_piso = 0.5
 var controles_bloqueados = false
 
+var escala_luz_original: float = 1.0
+
 func _ready() -> void:
 	checkpoint_position = global_position
-	
+	escala_luz_original = $PointLight2D.texture_scale
 	barra_energia.max_value = energia_maxima
 	barra_vida.max_value = vida_maxima
 	circulo_eco.max_value = tiempo_carga_eco
@@ -201,19 +203,34 @@ func ganar_nivel():
 	
 func sin_energia():
 	controles_bloqueados = true
-
-	# Mostrar cartel
+	velocity = Vector2.ZERO
+	$CanvasLayer2/ColorRect.visible = false
+	#se muestra el cartel
 	$CanvasLayer2/Mensaje.text = "Te quedaste sin energía"
+	$CanvasLayer2/Mensaje.visible = true
 	$CanvasLayer2.visible = true
 
-	# Esperar
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.5).timeout
+
+	# TRANSICIÓN DE APAGADO
+	var tween_apagado = create_tween()
+	tween_apagado.tween_property($PointLight2D, "texture_scale", 0.0, 1.0)
+	await tween_apagado.finished 
+
+	$CanvasLayer2/ColorRect.visible = true
+	$CanvasLayer2/Mensaje.visible = false
+	await get_tree().create_timer(0.5).timeout # Medio segundo de oscuridad total
 
 	global_position = checkpoint_position
-
 	energia_actual = energia_maxima
 	barra_energia.value = energia_actual
+	
+	$CanvasLayer2/ColorRect.visible = false
+
+	var tween_encendido = create_tween()
+	tween_encendido.tween_property($PointLight2D, "texture_scale", escala_luz_original, 1.0)
+	await tween_encendido.finished
 
 	$CanvasLayer2.visible = false
-
+	$CanvasLayer2/Mensaje.visible = true # Lo dejamos listo para la próxima vez
 	controles_bloqueados = false

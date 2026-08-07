@@ -190,19 +190,19 @@ offset_bottom = 1003.0
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1892178734]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=1767552051]
-visible = false
-offset_right = 1926.0
-offset_bottom = 1072.0
-color = Color(0.057996348, 0.057996348, 0.05799634, 1)
-
 [node name="Mensaje" type="RichTextLabel" parent="CanvasLayer2" unique_id=78908438]
-offset_left = 183.0
-offset_top = 166.0
-offset_right = 1727.0
-offset_bottom = 875.0
+offset_left = 452.0
+offset_top = 640.0
+offset_right = 1996.0
+offset_bottom = 1349.0
 theme_override_font_sizes/normal_font_size = 66
 bbcode_enabled = true
 text = "\"te quedaste sin energia\""
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=1767552051]
+visible = false
+offset_right = 1926.0
+offset_bottom = 1072.0
+color = Color(0, 0, 0, 1)

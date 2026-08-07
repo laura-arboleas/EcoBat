@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dnogqyfp4bq1f" path="res://rama.gd" id="1_ke0e1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
-size = Vector2(167, 11)
+size = Vector2(224, 46)
 
 [node name="StaticBody2D" type="Area2D" unique_id=1448156926 groups=["rama"]]
 script = ExtResource("1_ke0e1")
@@ -13,7 +13,7 @@ script = ExtResource("1_ke0e1")
 texture = ExtResource("1_grqsg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426519278]
-position = Vector2(-89.5, 42.5)
+position = Vector2(-61, 25)
 shape = SubResource("RectangleShape2D_xrivr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
