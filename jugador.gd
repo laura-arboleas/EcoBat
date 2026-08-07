@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var barra_energia = $CanvasLayer/BarraEnergia
 @onready var circulo_eco = $CirculoEco/Circulo_Eco
 @onready var barra_vida = $BarraVida/ProgressBar
+@onready var romper_Escudo = $AudioStreamPlayer
 
 var checkpoint_position: Vector2
 var esta_chocado = false
@@ -32,6 +33,7 @@ var intervalo_dano_piso = 0.5
 var controles_bloqueados = false
 
 var escala_luz_original: float = 1.0
+var es_invulnerable = false
 
 func _ready() -> void:
 	checkpoint_position = global_position
@@ -106,13 +108,22 @@ func _physics_process(delta: float) -> void:
 	revisar_colisiones()
 
 func revisar_colisiones():
+	if es_invulnerable:
+		return
 	# get_slide_collision_count() nos dice cuántas cosas tocamos en este frame
 	for i in get_slide_collision_count():
 		var colision = get_slide_collision(i)
 		var objeto_tocado = colision.get_collider() 
-
+		
 		if objeto_tocado.is_in_group("trampa"):
-			if "dano" in objeto_tocado:
+			if tiene_escudo:
+				romper_Escudo.play()
+				tiene_escudo = false
+				es_invulnerable = true
+				await get_tree().create_timer(0.5).timeout
+				es_invulnerable = false
+				return
+			elif "dano" in objeto_tocado:
 				recibir_golpe() 
 				modificar_vida(-objeto_tocado.dano)
 				return 
@@ -127,12 +138,7 @@ func colgarse_de_rama():
 	
 
 func recibir_golpe():
-	if tiene_escudo:
-		tiene_escudo = false
-		return 
-
 	if esta_chocado:
-		esta_chocado = false
 		return
 	esta_chocado = true
 	velocity = Vector2.ZERO 

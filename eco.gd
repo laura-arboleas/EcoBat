@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var light = $PointLight2D
 @onready var ring = $Sprite2D
+@onready var musica = $AudioStreamPlayer
 
 const INITIAL_SCALE = 0.1
 const FINAL_SCALE = 20
@@ -19,7 +20,7 @@ func _ready():
 	tween.parallel().tween_property(light, "scale", Vector2.ONE * FINAL_SCALE, DURATION)
 	tween.tween_interval(0.2)
 	tween.tween_property(light, "energy", 0.0, 0.5)
-	
+	musica.play()
 	for i in range(RING_COUNT):
 		disparar_aro(i * RING_DELAY)
 	

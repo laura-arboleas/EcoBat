@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://dlgqeu23n0pm1" path="res://pinchosAltos.tscn" id="9_flld4"]
 [ext_resource type="AudioStream" uid="uid://7rvriqqjl2x0" path="res://Audio/MSX/Main_them_Batboy_2.0.wav" id="17_116di"]
 [ext_resource type="PackedScene" uid="uid://bawx8viqhbc3v" path="res://MetaVictoria.tscn" id="17_cqgso"]
+[ext_resource type="PackedScene" uid="uid://ddmows08kge4f" path="res://naranja.tscn" id="18_gs3ip"]
+[ext_resource type="PackedScene" uid="uid://cjn044ue6rt43" path="res://amarillo.tscn" id="19_d5hcn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bs78y"]
 
@@ -237,8 +239,13 @@ position = Vector2(1404, 84)
 position = Vector2(10765, 22)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
-visible = false
 color = Color(0.032967977, 0.032967996, 0.032967962, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1117576059]
 stream = ExtResource("17_116di")
+
+[node name="Area2D" parent="." unique_id=1558158116 instance=ExtResource("18_gs3ip")]
+position = Vector2(-1223, -93)
+
+[node name="Area2D2" parent="." unique_id=672917208 instance=ExtResource("19_d5hcn")]
+position = Vector2(3756, 101)
