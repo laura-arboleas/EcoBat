@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://xi5mceotlt85"]
 
+[ext_resource type="Script" uid="uid://dy56u3fn3mtxk" path="res://pinchos.gd" id="1_i3k25"]
 [ext_resource type="Texture2D" uid="uid://dilototmu6rxa" path="res://imagenes/pinchos.png" id="1_kofkl"]
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1964254288]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1964254288 groups=["trampa"]]
+script = ExtResource("1_i3k25")
 
 [node name="Pinchos" type="Sprite2D" parent="." unique_id=1405947337]
 texture = ExtResource("1_kofkl")
@@ -10,4 +12,4 @@ texture = ExtResource("1_kofkl")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=191080831]
 position = Vector2(-2, -26)
 scale = Vector2(2, 2)
-polygon = PackedVector2Array(12, 13.5, 121, 100.5, 121, -21.5, 93, -76.5, 62, -21, 33, -76, 3.5, -18.5, -27, -75.5, -56.5, -15, -87, -75, -119, -16, -118.5, 100.5, 121, 100.5)
+polygon = PackedVector2Array(91, 77, 121, 100.5, 121, -21.5, 93, -76.5, 62, -21, 33, -76, 3.5, -18.5, -27, -75.5, -56.5, -15, -87, -75, -119, -16, -118.5, 100.5, 121, 100.5)

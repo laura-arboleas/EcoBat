@@ -8,81 +8,82 @@
 [ext_resource type="Texture2D" uid="uid://c0nnxkp8uvdaa" path="res://imagenes/Eco_habilidad-Photoroom (2).png" id="6_kg3ks"]
 [ext_resource type="Texture2D" uid="uid://c0ubo7i83suhu" path="res://imagenes/arriba-eco.png" id="7_v1h6a"]
 [ext_resource type="Texture2D" uid="uid://cyhjgsk6dncm7" path="res://imagenes/fondo.png" id="8_g5j21"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kg3ks"]
-atlas = ExtResource("2_ucnt4")
-region = Rect2(0, 0, 960, 960)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v1h6a"]
-atlas = ExtResource("2_ucnt4")
-region = Rect2(960, 0, 960, 960)
+[ext_resource type="AudioStream" uid="uid://c0eslpg2lfwt1" path="res://Audio/SFX/nes-14-11.wav" id="9_ikhd1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5j21"]
 atlas = ExtResource("2_ucnt4")
-region = Rect2(1920, 0, 960, 960)
+region = Rect2(0, 0, 240, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikhd1"]
 atlas = ExtResource("2_ucnt4")
-region = Rect2(2880, 0, 960, 960)
+region = Rect2(240, 0, 240, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_466xc"]
 atlas = ExtResource("2_ucnt4")
-region = Rect2(3840, 0, 960, 960)
+region = Rect2(480, 0, 240, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vwo7"]
 atlas = ExtResource("2_ucnt4")
-region = Rect2(4800, 0, 960, 960)
+region = Rect2(720, 0, 240, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rno6r"]
 atlas = ExtResource("2_ucnt4")
-region = Rect2(5760, 0, 960, 960)
+region = Rect2(960, 0, 240, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xsch2"]
 atlas = ExtResource("2_ucnt4")
-region = Rect2(6720, 0, 960, 960)
+region = Rect2(1200, 0, 240, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_defnh"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(1440, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b1b7"]
+atlas = ExtResource("2_ucnt4")
+region = Rect2(1680, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhgme"]
 atlas = ExtResource("3_w2bje")
-region = Rect2(0, 0, 960, 960)
+region = Rect2(0, 0, 240, 240)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ucnt4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_su64b"]
 atlas = ExtResource("3_ucnt4")
-region = Rect2(0, 0, 960, 960)
+region = Rect2(0, 0, 240, 240)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w2bje"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_81a1h"]
 atlas = ExtResource("3_ucnt4")
-region = Rect2(960, 0, 960, 960)
+region = Rect2(240, 0, 240, 240)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pclxs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_omsdt"]
 atlas = ExtResource("3_ucnt4")
-region = Rect2(1920, 0, 960, 960)
+region = Rect2(480, 0, 240, 240)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kg3ks")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v1h6a")
-}, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_g5j21")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_ikhd1")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_466xc")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_8vwo7")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_rno6r")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_xsch2")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_defnh")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_6b1b7")
 }],
 "loop": 1,
 "name": &"choque",
@@ -90,7 +91,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_defnh")
+"texture": SubResource("AtlasTexture_qhgme")
 }],
 "loop": 1,
 "name": &"colgado",
@@ -98,13 +99,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.8,
-"texture": SubResource("AtlasTexture_ucnt4")
+"texture": SubResource("AtlasTexture_su64b")
 }, {
 "duration": 0.8,
-"texture": SubResource("AtlasTexture_w2bje")
+"texture": SubResource("AtlasTexture_81a1h")
 }, {
 "duration": 0.8,
-"texture": SubResource("AtlasTexture_pclxs")
+"texture": SubResource("AtlasTexture_omsdt")
 }],
 "loop": 1,
 "name": &"move",
@@ -130,10 +131,9 @@ fill_to = Vector2(0.95051193, 0.2440273)
 [node name="Jugador" type="CharacterBody2D" unique_id=995713254]
 script = ExtResource("1_pfvk3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504]
-scale = Vector2(0.25, 0.25)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504 groups=["trampa"]]
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"move"
+animation = &"choque"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994921225]
 position = Vector2(8.000001, -0.99999976)
@@ -169,13 +169,12 @@ offset_right = 1844.0
 offset_bottom = 2135.0
 scale = Vector2(0.049232755, 0.048078246)
 fill_mode = 8
-texture_under = ExtResource("6_kg3ks")
-texture_progress = ExtResource("7_v1h6a")
+texture_under = ExtResource("7_v1h6a")
+texture_progress = ExtResource("6_kg3ks")
 
 [node name="BarraVida" type="CanvasLayer" parent="." unique_id=335027679]
 
 [node name="TextureRect" type="TextureRect" parent="BarraVida" unique_id=796251902]
-visible = false
 offset_left = 16.000004
 offset_top = 1003.00006
 offset_right = 1936.0
@@ -188,3 +187,26 @@ offset_left = 16.0
 offset_top = 974.0
 offset_right = 424.0
 offset_bottom = 1003.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1892178734]
+visible = false
+
+[node name="Mensaje" type="RichTextLabel" parent="CanvasLayer2" unique_id=78908438]
+offset_left = 452.0
+offset_top = 640.0
+offset_right = 1996.0
+offset_bottom = 1349.0
+theme_override_font_sizes/normal_font_size = 66
+bbcode_enabled = true
+text = "\"te quedaste sin energia\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=1767552051]
+visible = false
+offset_right = 1926.0
+offset_bottom = 1072.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1587223318]
+stream = ExtResource("9_ikhd1")

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EcoBat"
-run/main_scene="uid://cdn0v4h403xuk"
+run/main_scene="uid://bvmqtn113adw0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,11 +19,15 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="viewport"
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
 
 [global_group]
 
 rama=""
+trampa=""
+final=""
 
 [input]
 
@@ -39,6 +43,7 @@ Eco={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

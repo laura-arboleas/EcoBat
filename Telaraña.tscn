@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://wypdc02o74j"]
 
 [ext_resource type="Texture2D" uid="uid://bj0sfcvwf0mte" path="res://imagenes/telaraña.png" id="1_qilkk"]
+[ext_resource type="Script" uid="uid://dbv7m04flcbl4" path="res://telaraña.gd" id="1_qrxer"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
 radius = 127.0
 height = 508.0
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1043079483]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1043079483 groups=["trampa"]]
+script = ExtResource("1_qrxer")
 
 [node name="Telaraña" type="Sprite2D" parent="." unique_id=1835253697]
 texture = ExtResource("1_qilkk")
