@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bw18tunjdjvk2"]
+
+[ext_resource type="Script" uid="uid://ccvfswy646ha3" path="res://filtracion.gd" id="1_028ud"]
+[ext_resource type="PackedScene" uid="uid://djx77u3mpw5n1" path="res://gota_toxica.tscn" id="2_umnx1"]
+[ext_resource type="Texture2D" uid="uid://dj8hjsxwxemqj" path="res://imagenes/charcoSup.png" id="3_q54fl"]
+
+[node name="Marker2D" type="Marker2D" unique_id=1396801795]
+script = ExtResource("1_028ud")
+escena_gota = ExtResource("2_umnx1")
+
+[node name="Timer" type="Timer" parent="." unique_id=1730208282]
+wait_time = 3.0
+autostart = true
+
+[node name="CharcoSup" type="Sprite2D" parent="." unique_id=1375100194]
+position = Vector2(-8, -80)
+texture = ExtResource("3_q54fl")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

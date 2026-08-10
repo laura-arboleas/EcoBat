@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jxpigy5lw0fv"
-path="res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"
+uid="uid://cl2tb4v4y0sye"
+path="res://.godot/imported/bicho_violeta.png-caebe37c8c8fa441e752c4025f6020bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/parte del medio.png"
-dest_files=["res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"]
+source_file="res://imagenes/bicho_violeta.png"
+dest_files=["res://.godot/imported/bicho_violeta.png-caebe37c8c8fa441e752c4025f6020bc.ctex"]
 
 [params]
 

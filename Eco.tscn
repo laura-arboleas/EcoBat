@@ -28,4 +28,3 @@ texture = SubResource("GradientTexture2D_13qdw")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=542280528]
 stream = ExtResource("3_1u20r")
-volume_db = 1.0

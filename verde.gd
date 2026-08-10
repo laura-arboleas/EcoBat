@@ -32,5 +32,5 @@ func _process(delta: float):
 	
 func _on_body_entered(body):
 	if body.has_method("aplicar_veneno"):
-		body.aplicar_veneno(10.0) 
+		body.aplicar_veneno(5.0) 
 		queue_free()

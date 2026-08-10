@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jxpigy5lw0fv"
-path="res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"
+uid="uid://b1yig8nl85vds"
+path="res://.godot/imported/up_right.svg-aab9737e1f76d8420f9b6975756ad30b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/parte del medio.png"
-dest_files=["res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"]
+source_file="res://addons/virtual_joystick_DX/Dpad textures/preset 2/up_right.svg"
+dest_files=["res://.godot/imported/up_right.svg-aab9737e1f76d8420f9b6975756ad30b.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://f73iokaujhhw"]
+
+[ext_resource type="Script" uid="uid://ca4mbl3gnqo8y" path="res://trampa_telaraña.gd" id="1_027rf"]
+[ext_resource type="Texture2D" uid="uid://bj0sfcvwf0mte" path="res://imagenes/telaraña.png" id="2_mfp38"]
+[ext_resource type="PackedScene" uid="uid://brr2d7yy1oxoq" path="res://araña.tscn" id="3_f381i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
+radius = 214.0
+height = 718.0
+
+[node name="Node2D" type="Node2D" unique_id=1869618497]
+script = ExtResource("1_027rf")
+
+[node name="Telaraña" type="Sprite2D" parent="." unique_id=368471239]
+texture = ExtResource("2_mfp38")
+
+[node name="ZonaDeteccion" type="Area2D" parent="." unique_id=1415146403]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaDeteccion" unique_id=471900560]
+shape = SubResource("CapsuleShape2D_xrivr")
+
+[node name="araña" parent="." unique_id=2013560160 instance=ExtResource("3_f381i")]
+
+[connection signal="body_entered" from="ZonaDeteccion" to="." method="_on_zona_deteccion_body_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jxpigy5lw0fv"
-path="res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"
+uid="uid://dj3130yy2d6qk"
+path="res://.godot/imported/araña.png-d8bb55d08cc52b83f4edc22a3a73de8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/parte del medio.png"
-dest_files=["res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"]
+source_file="res://imagenes/araña.png"
+dest_files=["res://.godot/imported/araña.png-d8bb55d08cc52b83f4edc22a3a73de8c.ctex"]
 
 [params]
 

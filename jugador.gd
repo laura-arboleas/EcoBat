@@ -3,7 +3,8 @@ extends CharacterBody2D
 @onready var barra_energia = $CanvasLayer/BarraEnergia
 @onready var circulo_eco = $CirculoEco/Circulo_Eco
 @onready var barra_vida = $BarraVida/ProgressBar
-@onready var romper_Escudo = $AudioStreamPlayer
+#@onready var romper_Escudo = $AudioStreamPlayer
+const Eco = preload("res://Eco.tscn")
 
 var checkpoint_position: Vector2
 var esta_chocado = false
@@ -12,7 +13,7 @@ var esta_colgado = false
 var speed = 350
 var speed_reverse = 250
 var gravity = 2500
-const Eco = preload("res://Eco.tscn")
+
 
 var energia_maxima = 100.0
 var energia_actual = 100.0
@@ -28,12 +29,11 @@ var controles_invertidos = false
 var tiempo_carga_eco = 10.0
 var carga_actual_eco = 10.0
 
-var temporizador_piso = 0.0
-var intervalo_dano_piso = 0.5
 var controles_bloqueados = false
 
 var escala_luz_original: float = 1.0
 var es_invulnerable = false
+var inFloor = false
 
 func _ready() -> void:
 	checkpoint_position = global_position
@@ -98,12 +98,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide ()
 	
 	if is_on_floor():
-		temporizador_piso += delta 
-		if temporizador_piso >= intervalo_dano_piso:
-			modificar_vida(-1) 
-			temporizador_piso = 0.0
+		inFloor = true
 	else:
-		temporizador_piso = 0.0
+		inFloor = false
 
 	revisar_colisiones()
 
@@ -117,7 +114,7 @@ func revisar_colisiones():
 		
 		if objeto_tocado.is_in_group("trampa"):
 			if tiene_escudo:
-				romper_Escudo.play()
+				#romper_Escudo.play()
 				tiene_escudo = false
 				es_invulnerable = true
 				await get_tree().create_timer(0.5).timeout
@@ -157,7 +154,7 @@ func gestion_energia(delta):
 	if esta_colgado:
 			energia_actual += recarga_colgado * delta
 	else:
-		if energia_actual > 0:
+		if energia_actual > 0 && !inFloor:
 			energia_actual -= resta_pasiva * delta
 
 	if carga_actual_eco < tiempo_carga_eco:
@@ -178,6 +175,7 @@ func usar_ecolocalizacion():
 	add_child(nuevo_eco)
 	nuevo_eco.position = Vector2.ZERO
 	
+#----------------------------------------------------------------------------
 #funciones para los power up o colisiones
 func modificar_vida(cantidad: int):
 	vida_actual += cantidad
@@ -202,7 +200,7 @@ func aplicar_veneno(duracion: float):
 
 func morir():
 	print("Game Over")
-	get_tree().change_scene_to_file("res://Derrota.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://Derrota.tscn")
 
 func ganar_nivel():
 	controles_bloqueados = true

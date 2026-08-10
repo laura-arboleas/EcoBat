@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl2tb4v4y0sye"
-path="res://.godot/imported/bicho_violeta.png-a0c50825ae99013bd7967c2b4e03e1d8.ctex"
+uid="uid://rvdmieq0rgqr"
+path="res://.godot/imported/left.svg-035246fab70c4bb82ba391349f58cc2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bicho_violeta.png"
-dest_files=["res://.godot/imported/bicho_violeta.png-a0c50825ae99013bd7967c2b4e03e1d8.ctex"]
+source_file="res://addons/virtual_joystick_DX/Dpad textures/preset 2/left.svg"
+dest_files=["res://.godot/imported/left.svg-035246fab70c4bb82ba391349f58cc2f.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

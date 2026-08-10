@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jxpigy5lw0fv"
-path="res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"
+uid="uid://bqqegmrlw3sep"
+path="res://.godot/imported/vjdx_asset_icon.png-a00bca3d23f506566c859d0e068a1517.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/parte del medio.png"
-dest_files=["res://.godot/imported/parte del medio.png-c853315676c6ff7b3788141f06d96f3f.ctex"]
+source_file="res://addons/virtual_joystick_DX/vjdx_asset_icon.png"
+dest_files=["res://.godot/imported/vjdx_asset_icon.png-a00bca3d23f506566c859d0e068a1517.ctex"]
 
 [params]
 

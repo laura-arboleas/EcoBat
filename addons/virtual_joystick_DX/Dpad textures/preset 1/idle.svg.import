@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0372120xhxg8"
-path="res://.godot/imported/ejemplo_en_imagen.png-ed34155411ffbffa56d969d89a182578.ctex"
+uid="uid://bhipr4betlui1"
+path="res://.godot/imported/idle.svg-0f840331d8666aee2357baadb1afe56b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/ejemplo_en_imagen.png"
-dest_files=["res://.godot/imported/ejemplo_en_imagen.png-ed34155411ffbffa56d969d89a182578.ctex"]
+source_file="res://addons/virtual_joystick_DX/Dpad textures/preset 1/idle.svg"
+dest_files=["res://.godot/imported/idle.svg-0f840331d8666aee2357baadb1afe56b.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

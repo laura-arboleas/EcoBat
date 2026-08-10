@@ -6,7 +6,7 @@ func _on_boton_salir_pressed() -> void:
 
 
 func _on_boton_siguiente_nivel_pressed() -> void:
-	get_tree().change_scene_to_file("res://Juego.tscn")
+	get_tree().change_scene_to_file("res://Nivel2.tscn")
 
 
 func _on_menu_principal_pressed() -> void:
