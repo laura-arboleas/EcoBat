@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://elyqve1ho1w1"
-path="res://.godot/imported/rama.png-3845e7537a898edc7ae93c1aa3660331.ctex"
+uid="uid://dj8hjsxwxemqj"
+path="res://.godot/imported/charcoSup.png-5cd017a0f3deaf0d41be595dc5028298.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/rama.png"
-dest_files=["res://.godot/imported/rama.png-3845e7537a898edc7ae93c1aa3660331.ctex"]
+source_file="res://imagenes/charcoSup.png"
+dest_files=["res://.godot/imported/charcoSup.png-5cd017a0f3deaf0d41be595dc5028298.ctex"]
 
 [params]
 

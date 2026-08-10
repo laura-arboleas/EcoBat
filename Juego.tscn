@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bmhnhb7rqt1er" path="res://imagenes/piso irregular con borde.png" id="4_flld4"]
 [ext_resource type="Texture2D" uid="uid://cxmasytk1yhdq" path="res://imagenes/piso.png" id="5_fhirl"]
 [ext_resource type="PackedScene" uid="uid://cd1evulgjspf5" path="res://verde.tscn" id="6_bs78y"]
-[ext_resource type="Texture2D" uid="uid://bmjbxbkoggxsp" path="res://imagenes/parte del medio.png" id="6_rrymi"]
+[ext_resource type="Texture2D" uid="uid://jxpigy5lw0fv" path="res://imagenes/parte del medio.png" id="6_rrymi"]
 [ext_resource type="Texture2D" uid="uid://8tfyv6d3tgni" path="res://imagenes/piso irregular.png" id="7_cqgso"]
 [ext_resource type="PackedScene" uid="uid://wypdc02o74j" path="res://Telaraña.tscn" id="8_lym1s"]
 [ext_resource type="PackedScene" uid="uid://dlgqeu23n0pm1" path="res://pinchosAltos.tscn" id="9_flld4"]
@@ -239,6 +239,7 @@ position = Vector2(1404, 84)
 position = Vector2(10765, 22)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
+visible = false
 color = Color(0.032967977, 0.032967996, 0.032967962, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1117576059]
