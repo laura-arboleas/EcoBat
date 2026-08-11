@@ -239,6 +239,7 @@ position = Vector2(-1969, -323)
 position = Vector2(10765, 22)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
+visible = false
 color = Color(0.032967977, 0.032967996, 0.032967962, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1117576059]
@@ -253,10 +254,8 @@ position = Vector2(3756, 101)
 [node name="Node2D" parent="." unique_id=1869618497 instance=ExtResource("19_rl8qe")]
 position = Vector2(-1772, -201)
 
-[node name="Gotera" type="Node" parent="." unique_id=185732533]
+[node name="Marker2D" parent="." unique_id=1396801795 instance=ExtResource("20_p5bdg")]
+position = Vector2(-2716, -164)
 
-[node name="Area2D3" parent="Gotera" unique_id=704587146 instance=ExtResource("21_cpo1y")]
+[node name="Area2D3" parent="." unique_id=704587146 instance=ExtResource("21_cpo1y")]
 position = Vector2(-2918, 299)
-
-[node name="Marker2D" parent="Gotera" unique_id=1396801795 instance=ExtResource("20_p5bdg")]
-position = Vector2(-2714, -157)

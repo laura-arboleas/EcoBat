@@ -239,7 +239,6 @@ position = Vector2(1404, 84)
 position = Vector2(10765, 22)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
-visible = false
 color = Color(0.032967977, 0.032967996, 0.032967962, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1117576059]

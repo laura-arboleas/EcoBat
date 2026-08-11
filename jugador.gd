@@ -1,11 +1,16 @@
 
 extends CharacterBody2D
-@onready var barra_energia = $CanvasLayer/BarraEnergia
+@onready var barra_energia = $BarraEnergia/BarraEnergia
+@onready var porcentaje_energia = $BarraEnergia/Porcentaje
 @onready var circulo_eco = $CirculoEco/Circulo_Eco
-@onready var barra_vida = $BarraVida/ProgressBar
+@onready var barra_vida = $BarraVida/TextureProgressBar
+@onready var porcentaje_vida = $BarraVida/Porcentaje
+@onready var escudo_imagen = $BarraVida/Escudo
 #@onready var romper_Escudo = $AudioStreamPlayer
 const Eco = preload("res://Eco.tscn")
 
+var tiene_escudo = false
+var es_invulnerable = false
 var checkpoint_position: Vector2
 var esta_chocado = false
 var esta_colgado = false
@@ -23,7 +28,7 @@ var vida_actual = 100.0
 var costo_eco = 20.0 
 var recarga_colgado = 10.0
 
-var tiene_escudo = false
+
 var controles_invertidos = false
 
 var tiempo_carga_eco = 10.0
@@ -32,14 +37,17 @@ var carga_actual_eco = 10.0
 var controles_bloqueados = false
 
 var escala_luz_original: float = 1.0
-var es_invulnerable = false
+
 var inFloor = false
 
 func _ready() -> void:
+	escudo_imagen.visible = false 
 	checkpoint_position = global_position
 	escala_luz_original = $PointLight2D.texture_scale
 	barra_energia.max_value = energia_maxima
+	actualizar_energia()
 	barra_vida.max_value = vida_maxima
+	actualizar_vida()
 	circulo_eco.max_value = tiempo_carga_eco
 
 func _physics_process(delta: float) -> void:	
@@ -119,6 +127,7 @@ func revisar_colisiones():
 				es_invulnerable = true
 				await get_tree().create_timer(0.5).timeout
 				es_invulnerable = false
+				escudo_imagen.visible = false
 				return
 			elif "dano" in objeto_tocado:
 				recibir_golpe() 
@@ -164,7 +173,9 @@ func gestion_energia(delta):
 	carga_actual_eco = clamp(carga_actual_eco, 0, tiempo_carga_eco)
 
 	barra_energia.value = energia_actual
+	actualizar_energia()
 	barra_vida.value = vida_actual
+	actualizar_vida()
 	circulo_eco.value = carga_actual_eco
 	
 func usar_ecolocalizacion():
@@ -181,6 +192,7 @@ func modificar_vida(cantidad: int):
 	vida_actual += cantidad
 	vida_actual = clamp(vida_actual, 0, vida_maxima)
 	barra_vida.value = vida_actual
+	actualizar_vida()
 	if vida_actual <= 0:
 		morir()
 
@@ -188,10 +200,11 @@ func modificar_energia(cantidad: float):
 	energia_actual += cantidad
 	energia_actual = clamp(energia_actual, 0, energia_maxima)
 	barra_energia.value = energia_actual
+	actualizar_energia()
 
 func activar_escudo():
 	tiene_escudo = true
-	# $SpriteEscudo.visible = true (si tienes un efecto visual)
+	escudo_imagen.visible = true 
 	
 func aplicar_veneno(duracion: float):
 	controles_invertidos = true
@@ -228,6 +241,7 @@ func sin_energia():
 	global_position = checkpoint_position
 	energia_actual = energia_maxima
 	barra_energia.value = energia_actual
+	actualizar_energia()
 	
 	$CanvasLayer2/ColorRect.visible = false
 
@@ -238,3 +252,11 @@ func sin_energia():
 	$CanvasLayer2.visible = false
 	$CanvasLayer2/Mensaje.visible = true # Lo dejamos listo para la próxima vez
 	controles_bloqueados = false
+
+
+func actualizar_vida():
+	porcentaje_vida.text = str(round(barra_vida.value)) + "%"
+
+
+func actualizar_energia():
+	porcentaje_energia.text = str(round(barra_energia.value)) + "%"
