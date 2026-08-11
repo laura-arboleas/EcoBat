@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://becsqpgrpb8hc" path="res://imagenes/pantalla victoria.png" id="1_xtg27"]
 [ext_resource type="Texture2D" uid="uid://c08ltsvpon7pn" path="res://imagenes/BOTON salir1.png" id="2_pad2k"]
 [ext_resource type="Texture2D" uid="uid://csdffrjeq1q3y" path="res://imagenes/BOTON salir2.png" id="3_bl21q"]
-[ext_resource type="Texture2D" uid="uid://ustjf4wovtuh" path="res://imagenes/boton rejugar1.png" id="5_pad2k"]
-[ext_resource type="Texture2D" uid="uid://d3o80pdtr8a5g" path="res://imagenes/boton rejugar2.png" id="6_bl21q"]
+[ext_resource type="Texture2D" uid="uid://ek4q2on866we" path="res://imagenes/boton seguir2.png" id="5_gvs5y"]
+[ext_resource type="Texture2D" uid="uid://b5jpa41inf2mv" path="res://imagenes/boton seguir1.png" id="6_67kmo"]
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="7_gvs5y"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="8_67kmo"]
 
@@ -39,8 +39,8 @@ offset_left = 363.0
 offset_top = 665.0
 offset_right = 723.0
 offset_bottom = 785.0
-texture_normal = ExtResource("5_pad2k")
-texture_pressed = ExtResource("6_bl21q")
+texture_normal = ExtResource("5_gvs5y")
+texture_pressed = ExtResource("6_67kmo")
 
 [node name="MenuPrincipal" type="TextureButton" parent="." unique_id=1203150103]
 layout_mode = 0
