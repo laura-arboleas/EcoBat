@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bdscbn7k5taw" path="res://eco.gd" id="1_lmk47"]
 [ext_resource type="Texture2D" uid="uid://c71cqxg4oamy" path="res://imagenes/Aro_blanco.png" id="2_1u20r"]
-[ext_resource type="AudioStream" uid="uid://dkjudpil4g4ai" path="res://Audio/SFX/Eco_power_1.wav" id="3_1u20r"]
+[ext_resource type="AudioStream" uid="uid://cuwhbf6dnaqub" path="res://Audio/SFX/Eco_power_1.wav" id="3_1u20r"]
 
 [sub_resource type="Gradient" id="Gradient_lmk47"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -28,3 +28,4 @@ texture = SubResource("GradientTexture2D_13qdw")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=542280528]
 stream = ExtResource("3_1u20r")
+volume_db = -10.0

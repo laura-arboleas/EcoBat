@@ -24,7 +24,9 @@ func _process(delta: float):
 func prender_luz() -> void:
 		luz_encendida = true
 		luz.enabled = true
-
+func bajar() -> void:
+	$AnimatedSprite2D.play("baja")
+	
 func _on_body_entered(body):
 	if body.has_method("modificar_vida"):
 		body.modificar_vida(-30.0)

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cdfo16e1ee2ks" path="res://jugador.gd" id="1_pfvk3"]
 [ext_resource type="Texture2D" uid="uid://byyqst5fcqj1u" path="res://imagenes/choque spritesheet.png" id="2_ucnt4"]
+[ext_resource type="Texture2D" uid="uid://dylodjvnt0unl" path="res://imagenes/colgado movimiento.png" id="3_qhgme"]
 [ext_resource type="Texture2D" uid="uid://dy0jbjkeorg7v" path="res://imagenes/muercielago.png" id="3_ucnt4"]
-[ext_resource type="Texture2D" uid="uid://bdks0f3m7jm1x" path="res://imagenes/colgado.png" id="3_w2bje"]
 [ext_resource type="Script" uid="uid://xabitrap68wl" path="res://camera.gd" id="5_pclxs"]
 [ext_resource type="Texture2D" uid="uid://brpf6anasofr6" path="res://imagenes/barra energia5.png" id="6_rno6r"]
 [ext_resource type="Texture2D" uid="uid://nr4lckx7ll4r" path="res://imagenes/barra energia3.png" id="7_xsch2"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://b3ojgq2i4yiua" path="res://Celular.gd" id="9_ikhd1"]
 [ext_resource type="Texture2D" uid="uid://dtwod4suf7lht" path="res://imagenes/barra vida3.png" id="10_xsch2"]
 [ext_resource type="Texture2D" uid="uid://bkfvrwtm0m0xm" path="res://imagenes/vida.png" id="13_qhgme"]
-[ext_resource type="AudioStream" uid="uid://d1bw0m18lrttk" path="res://Audio/SFX/Colition_SFX_1.wav" id="13_su64b"]
+[ext_resource type="AudioStream" uid="uid://c2ocxl6b6lcdd" path="res://Audio/SFX/Colition_SFX_1.wav" id="13_su64b"]
 [ext_resource type="Texture2D" uid="uid://bl6mppj2m65g6" path="res://imagenes/eco1.png" id="14_6b1b7"]
 [ext_resource type="Texture2D" uid="uid://gde3fg5qgaqq" path="res://imagenes/eco2.png" id="15_qhgme"]
 [ext_resource type="Texture2D" uid="uid://dnsyvvikelvbe" path="res://imagenes/escudo.png" id="15_su64b"]
@@ -49,9 +49,13 @@ region = Rect2(1440, 0, 240, 240)
 atlas = ExtResource("2_ucnt4")
 region = Rect2(1680, 0, 240, 240)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhgme"]
-atlas = ExtResource("3_w2bje")
+[sub_resource type="AtlasTexture" id="AtlasTexture_um7aa"]
+atlas = ExtResource("3_qhgme")
 region = Rect2(0, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb6ju"]
+atlas = ExtResource("3_qhgme")
+region = Rect2(240, 0, 240, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_su64b"]
 atlas = ExtResource("3_ucnt4")
@@ -97,8 +101,11 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qhgme")
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_um7aa")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_yb6ju")
 }],
 "loop": 1,
 "name": &"colgado",
@@ -138,7 +145,9 @@ script = ExtResource("1_pfvk3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504 groups=["trampa"]]
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"choque"
+animation = &"colgado"
+frame = 1
+frame_progress = 0.2701355
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994921225]
 position = Vector2(8.000001, -0.99999976)
@@ -234,6 +243,7 @@ texture_under = ExtResource("15_qhgme")
 texture_progress = ExtResource("14_6b1b7")
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1682288675]
+visible = false
 script = ExtResource("9_ikhd1")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer3" unique_id=196220172]

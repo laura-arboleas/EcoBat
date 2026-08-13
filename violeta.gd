@@ -5,6 +5,7 @@ extends Area2D
 @export var radio_y: float = 30.0
 @export var velocidad_x: float = 3.0
 @export var velocidad_y: float = 4.0
+@onready var comer_bicho = $comer
 
 # --- NUEVAS VARIABLES PARA LA LUZ ---
 @onready var luz = $PointLight2D # Asegúrate de que el nombre coincida con tu nodo
@@ -31,6 +32,12 @@ func _process(delta: float):
 	luz.energy = intensidad_suave * energia_maxima_luz
 	
 func _on_body_entered(body):
+	comer_bicho.play()
 	if body.has_method("modificar_vida"):
 		body.modificar_vida(25.0) # Le cura 25 de vida
+		comer_bicho.play()
+		$AnimatedSprite2D.visible = false
+		luz.visible = false
+		$CollisionShape2D.set_deferred("disabled", true)
+		await comer_bicho.finished
 		queue_free() 

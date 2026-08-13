@@ -1,5 +1,5 @@
 extends Area2D
-
+@onready var comer_bicho = $comer
 # --- VARIABLES DE MOVIMIENTO ---
 @export var radio_x: float = 30.0
 @export var radio_y: float = 30.0
@@ -31,6 +31,12 @@ func _process(delta: float):
 	luz.energy = intensidad_suave * energia_maxima_luz
 	
 func _on_body_entered(body):
+	comer_bicho.play()
 	if body.has_method("activar_escudo"):
 		body.activar_escudo() # Le enciende la bandera del escudo
+		comer_bicho.play()
+		$AnimatedSprite2D.visible = false
+		luz.visible = false
+		$CollisionShape2D.set_deferred("disabled", true)
+		await comer_bicho.finished
 		queue_free()

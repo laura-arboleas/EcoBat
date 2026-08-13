@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dk2blns32xvhm" path="res://verde.gd" id="1_stwq8"]
 [ext_resource type="Texture2D" uid="uid://dw8852y24mb5t" path="res://imagenes/bichito verde.png" id="2_stwq8"]
+[ext_resource type="AudioStream" uid="uid://b0i16mvouql8q" path="res://Audio/SFX/Lose_Game_2.wav" id="3_2184s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2184s"]
 atlas = ExtResource("2_stwq8")
@@ -64,5 +65,8 @@ texture = SubResource("GradientTexture2D_2184s")
 scale = Vector2(2, 2)
 rect = Rect2(-32.5, -33, 63.5, 66)
 enable_mode = 1
+
+[node name="comer" type="AudioStreamPlayer" parent="." unique_id=1129565636]
+stream = ExtResource("3_2184s")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

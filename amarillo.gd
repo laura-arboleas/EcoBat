@@ -10,7 +10,7 @@ extends Area2D
 @onready var luz = $PointLight2D # Asegúrate de que el nombre coincida con tu nodo
 @export var velocidad_pulso: float = 3.0 # Qué tan rápido parpadea
 @export var energia_maxima_luz: float = 1.5 # Qué tan brillante se pone al máximo
-
+@onready var comer_bicho = $comer
 var tiempo: float = 0.0
 var posicion_inicial: Vector2
 
@@ -34,4 +34,9 @@ func _process(delta: float):
 func _on_body_entered(body):
 	if body.has_method("modificar_energia"):
 		body.modificar_energia(25.0) # Le cura 25 de energia
-		queue_free() 
+		comer_bicho.play()
+		$AnimatedSprite2D.visible = false
+		luz.visible = false
+		$CollisionShape2D.set_deferred("disabled", true)
+		await comer_bicho.finished
+		queue_free()

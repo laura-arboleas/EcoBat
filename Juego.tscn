@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://8tfyv6d3tgni" path="res://imagenes/piso irregular.png" id="7_cqgso"]
 [ext_resource type="PackedScene" uid="uid://wypdc02o74j" path="res://Telaraña.tscn" id="8_lym1s"]
 [ext_resource type="PackedScene" uid="uid://dlgqeu23n0pm1" path="res://pinchosAltos.tscn" id="9_flld4"]
-[ext_resource type="AudioStream" uid="uid://7rvriqqjl2x0" path="res://Audio/MSX/Main_them_Batboy_2.0.wav" id="17_116di"]
+[ext_resource type="AudioStream" uid="uid://f2445frfcaq2" path="res://Audio/MFX/Main_them_Batboy_2.0.wav" id="16_116di"]
 [ext_resource type="PackedScene" uid="uid://ddmows08kge4f" path="res://naranja.tscn" id="18_gs3ip"]
 [ext_resource type="PackedScene" uid="uid://cjn044ue6rt43" path="res://amarillo.tscn" id="19_d5hcn"]
 [ext_resource type="PackedScene" uid="uid://mvxjghvrh3h3" path="res://Meta_Final.tscn" id="19_gs3ip"]
@@ -218,6 +218,12 @@ position = Vector2(310, 81)
 
 [node name="Area2D" parent="power-up" unique_id=2013560160 instance=ExtResource("3_aio1g")]
 position = Vector2(5523, -72)
+radio_x = 30.0
+radio_y = 30.0
+velocidad_x = 3.0
+velocidad_y = 4.0
+velocidad_pulso = 3.0
+energia_maxima_luz = 1.5
 
 [node name="Area2D2" parent="power-up" unique_id=303398772 instance=ExtResource("6_bs78y")]
 position = Vector2(2913, -345)
@@ -236,8 +242,9 @@ position = Vector2(1404, 84)
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
 color = Color(0.032967977, 0.032967996, 0.032967962, 1)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1117576059]
-stream = ExtResource("17_116di")
+[node name="Musica_Fondo" type="AudioStreamPlayer" parent="." unique_id=1117576059]
+stream = ExtResource("16_116di")
+volume_db = -15.0
 
 [node name="Area2D" parent="." unique_id=1558158116 instance=ExtResource("18_gs3ip")]
 position = Vector2(-1223, -93)

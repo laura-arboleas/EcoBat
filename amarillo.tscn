@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bkojv1o72fwp2" path="res://amarillo.gd" id="1_7nl0x"]
 [ext_resource type="Texture2D" uid="uid://cp3bjst6fnk01" path="res://imagenes/bichito amarillo.png" id="2_7nl0x"]
+[ext_resource type="AudioStream" uid="uid://bqu5hsqm6yd6b" path="res://Audio/SFX/Bichito_SFX.wav" id="3_y1efg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1efg"]
 atlas = ExtResource("2_7nl0x")
@@ -66,5 +67,8 @@ texture = SubResource("GradientTexture2D_y1efg")
 scale = Vector2(2, 2)
 rect = Rect2(-32.5, -33, 63.5, 66)
 enable_mode = 1
+
+[node name="comer" type="AudioStreamPlayer" parent="." unique_id=439197692]
+stream = ExtResource("3_y1efg")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,2 +1,2 @@
 extends StaticBody2D
-@export var dano: int = 10
+@export var dano: int = 5

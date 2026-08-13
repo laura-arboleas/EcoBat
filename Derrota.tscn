@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://d3o80pdtr8a5g" path="res://imagenes/boton rejugar2.png" id="6_t2qgj"]
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="7_odghq"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="8_6h1ks"]
+[ext_resource type="AudioStream" uid="uid://vrpoyneqcvvd" path="res://Audio/SFX/Lose_Game_SFX.wav" id="9_sgyx2"]
+[ext_resource type="AudioStream" uid="uid://t6uad2rhyk2q" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="10_p1jqd"]
 
 [node name="Control" type="Control" unique_id=947294257]
 layout_mode = 3
@@ -50,6 +52,12 @@ offset_right = 610.0
 offset_bottom = 886.0
 texture_normal = ExtResource("7_odghq")
 texture_pressed = ExtResource("8_6h1ks")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2127744119]
+stream = ExtResource("9_sgyx2")
+
+[node name="Select" type="AudioStreamPlayer" parent="." unique_id=1606404570]
+stream = ExtResource("10_p1jqd")
 
 [connection signal="pressed" from="Boton Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Boton Reintentar" to="." method="_on_boton_reintentar_pressed"]

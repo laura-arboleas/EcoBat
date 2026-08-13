@@ -19,7 +19,7 @@ var speed_reverse = 250
 var gravity = 2500
 var resta_pasiva = 1.6
 var costo_eco = 20.0 
-var recarga_colgado = 10.0
+var recarga_colgado = 15.0
 var controles_invertidos = false
 
 var tiempo_carga_eco = 10.0

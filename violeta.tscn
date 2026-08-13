@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3bgdj4h78w4t" path="res://violeta.gd" id="1_mty2u"]
 [ext_resource type="Texture2D" uid="uid://dco08wmam0r2y" path="res://imagenes/bichito violeta.png" id="2_mty2u"]
+[ext_resource type="AudioStream" uid="uid://bqu5hsqm6yd6b" path="res://Audio/SFX/Bichito_SFX.wav" id="3_p643m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p643m"]
 atlas = ExtResource("2_mty2u")
@@ -46,6 +47,12 @@ fill_to = Vector2(0.9306723, 0.17436975)
 
 [node name="violeta" type="Area2D" unique_id=2013560160]
 script = ExtResource("1_mty2u")
+radio_x = null
+radio_y = null
+velocidad_x = null
+velocidad_y = null
+velocidad_pulso = null
+energia_maxima_luz = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1797816800]
 sprite_frames = SubResource("SpriteFrames_xrivr")
@@ -64,5 +71,8 @@ texture = SubResource("GradientTexture2D_xrivr")
 scale = Vector2(2, 2)
 rect = Rect2(-32.5, -33, 63.5, 66)
 enable_mode = 1
+
+[node name="comer" type="AudioStreamPlayer" parent="." unique_id=1246011958]
+stream = ExtResource("3_p643m")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
