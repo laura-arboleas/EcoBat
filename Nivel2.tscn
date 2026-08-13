@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3nqr6glallub" path="res://juego.gd" id="1_rl8qe"]
 [ext_resource type="Texture2D" uid="uid://cyhjgsk6dncm7" path="res://imagenes/fondo.png" id="2_p5bdg"]
-[ext_resource type="Texture2D" uid="uid://wx31qsrmbel1" path="res://imagenes/fondo llegada.png" id="3_cpo1y"]
+[ext_resource type="PackedScene" uid="uid://mvxjghvrh3h3" path="res://Meta_Final.tscn" id="3_p5bdg"]
 [ext_resource type="Texture2D" uid="uid://cggt4i3pmbn3g" path="res://imagenes/piso con borde1.png" id="4_p8kk5"]
 [ext_resource type="Texture2D" uid="uid://bmhnhb7rqt1er" path="res://imagenes/piso irregular con borde.png" id="5_4pl7p"]
 [ext_resource type="Texture2D" uid="uid://cxmasytk1yhdq" path="res://imagenes/piso.png" id="6_gcc2i"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bfwt8h0lolc8r" path="res://violeta.tscn" id="12_l065s"]
 [ext_resource type="PackedScene" uid="uid://cd1evulgjspf5" path="res://verde.tscn" id="13_0gt0o"]
 [ext_resource type="PackedScene" uid="uid://dvacy053l8c65" path="res://Jugador.tscn" id="14_ldd4w"]
-[ext_resource type="PackedScene" uid="uid://bawx8viqhbc3v" path="res://MetaVictoria.tscn" id="16_s45rf"]
 [ext_resource type="AudioStream" uid="uid://7rvriqqjl2x0" path="res://Audio/MSX/Main_them_Batboy_2.0.wav" id="17_y7few"]
 [ext_resource type="PackedScene" uid="uid://ddmows08kge4f" path="res://naranja.tscn" id="18_gb1um"]
 [ext_resource type="PackedScene" uid="uid://f73iokaujhhw" path="res://Trampa_telaraña.tscn" id="19_rl8qe"]
@@ -115,9 +114,8 @@ position = Vector2(-756, -531)
 texture = ExtResource("2_p5bdg")
 centered = false
 
-[node name="Fondo2" type="Sprite2D" parent="." unique_id=1741351865]
-position = Vector2(9804, 8)
-texture = ExtResource("3_cpo1y")
+[node name="Final" parent="." unique_id=712232509 instance=ExtResource("3_p5bdg")]
+position = Vector2(9804, 7)
 
 [node name="Fondo" type="Node2D" parent="." unique_id=894719461]
 
@@ -256,9 +254,6 @@ scale = Vector2(0.9999998, 0.9999998)
 
 [node name="Telarañas" type="Node2D" parent="." unique_id=1570050498]
 position = Vector2(-1969, -323)
-
-[node name="MetaVictoria" parent="." unique_id=108073805 instance=ExtResource("16_s45rf")]
-position = Vector2(10765, 22)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
 visible = false

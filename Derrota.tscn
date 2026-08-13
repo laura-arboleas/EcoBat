@@ -33,7 +33,7 @@ offset_bottom = 953.0
 texture_normal = ExtResource("3_p1jqd")
 texture_pressed = ExtResource("4_t73kw")
 
-[node name="Boton Siguiente Nivel" type="TextureButton" parent="." unique_id=1757257932]
+[node name="Boton Reintentar" type="TextureButton" parent="." unique_id=1757257932]
 layout_mode = 0
 offset_left = 359.0
 offset_top = 665.0
@@ -52,5 +52,5 @@ texture_normal = ExtResource("7_odghq")
 texture_pressed = ExtResource("8_6h1ks")
 
 [connection signal="pressed" from="Boton Salir" to="." method="_on_boton_salir_pressed"]
-[connection signal="pressed" from="Boton Siguiente Nivel" to="." method="_on_boton_siguiente_nivel_pressed"]
+[connection signal="pressed" from="Boton Reintentar" to="." method="_on_boton_reintentar_pressed"]
 [connection signal="pressed" from="MenuPrincipal" to="." method="_on_menu_principal_pressed"]

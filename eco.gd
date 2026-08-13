@@ -6,7 +6,7 @@ extends Node2D
 
 const INITIAL_SCALE = 0.1
 const FINAL_SCALE = 20
-const DURATION = 2
+const DURATION = 4
 
 const RING_COUNT = 3     
 const RING_DELAY = 0.4

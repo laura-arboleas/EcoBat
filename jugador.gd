@@ -9,46 +9,40 @@ extends CharacterBody2D
 #@onready var romper_Escudo = $AudioStreamPlayer
 const Eco = preload("res://Eco.tscn")
 
-var tiene_escudo = false
+
 var es_invulnerable = false
 var checkpoint_position: Vector2
 var esta_chocado = false
 var esta_colgado = false
-
 var speed = 350
 var speed_reverse = 250
 var gravity = 2500
-
-
-var energia_maxima = 100.0
-var energia_actual = 100.0
-var resta_pasiva = 1.8
-var vida_maxima = 100.0
-var vida_actual = 100.0
+var resta_pasiva = 1.6
 var costo_eco = 20.0 
 var recarga_colgado = 10.0
-
-
 var controles_invertidos = false
 
 var tiempo_carga_eco = 10.0
 var carga_actual_eco = 10.0
 
 var controles_bloqueados = false
-
 var escala_luz_original: float = 1.0
-
 var inFloor = false
 
 func _ready() -> void:
-	escudo_imagen.visible = false 
+	Global.ruta_nivel_actual = get_tree().current_scene.scene_file_path
+	escudo_imagen.visible = Global.tiene_escudo 
 	checkpoint_position = global_position
 	escala_luz_original = $PointLight2D.texture_scale
-	barra_energia.max_value = energia_maxima
+	
+	# Usamos los datos del Global
+	barra_energia.max_value = Global.energia_maxima
 	actualizar_energia()
-	barra_vida.max_value = vida_maxima
+	barra_vida.max_value = Global.vida_maxima
 	actualizar_vida()
 	circulo_eco.max_value = tiempo_carga_eco
+
+
 
 func _physics_process(delta: float) -> void:	
 	if controles_bloqueados:
@@ -58,7 +52,7 @@ func _physics_process(delta: float) -> void:
 		
 	gestion_energia(delta)
 	
-	if energia_actual <= 0:
+	if Global.energia_actual <= 0:
 		await sin_energia()
 		return
 	
@@ -101,7 +95,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = direction.y * current_speed
 		
 	if Input.is_action_just_pressed("Eco"):
-		if carga_actual_eco >= tiempo_carga_eco and energia_actual >= costo_eco:
+		if carga_actual_eco >= tiempo_carga_eco and Global.energia_actual >= costo_eco:
 			usar_ecolocalizacion()
 	move_and_slide ()
 	
@@ -121,9 +115,9 @@ func revisar_colisiones():
 		var objeto_tocado = colision.get_collider() 
 		
 		if objeto_tocado.is_in_group("trampa"):
-			if tiene_escudo:
+			if Global.tiene_escudo:
 				#romper_Escudo.play()
-				tiene_escudo = false
+				Global.tiene_escudo = false
 				es_invulnerable = true
 				await get_tree().create_timer(0.5).timeout
 				es_invulnerable = false
@@ -156,30 +150,30 @@ func recibir_golpe():
 
 func agarrar_power():
 		
-	energia_actual += 15
-	energia_actual = clamp(energia_actual, 0, energia_maxima)
+	Global.energia_actual += 15
+	Global.energia_actual = clamp(Global.energia_actual, 0, Global.energia_maxima)
 
 func gestion_energia(delta):
 	if esta_colgado:
-			energia_actual += recarga_colgado * delta
+			Global.energia_actual += recarga_colgado * delta
 	else:
-		if energia_actual > 0 && !inFloor:
-			energia_actual -= resta_pasiva * delta
+		if Global.energia_actual > 0 && !inFloor:
+			Global.energia_actual -= resta_pasiva * delta
 
 	if carga_actual_eco < tiempo_carga_eco:
 		carga_actual_eco += delta
 	
-	energia_actual = clamp(energia_actual, 0, energia_maxima)
+	Global.energia_actual = clamp(Global.energia_actual, 0, Global.energia_maxima)
 	carga_actual_eco = clamp(carga_actual_eco, 0, tiempo_carga_eco)
 
-	barra_energia.value = energia_actual
+	barra_energia.value = Global.energia_actual
 	actualizar_energia()
-	barra_vida.value = vida_actual
+	barra_vida.value = Global.vida_actual
 	actualizar_vida()
 	circulo_eco.value = carga_actual_eco
 	
 func usar_ecolocalizacion():
-	energia_actual -= costo_eco
+	Global.energia_actual -= costo_eco
 	carga_actual_eco = 0.0
 	
 	var nuevo_eco = Eco.instantiate()
@@ -189,21 +183,24 @@ func usar_ecolocalizacion():
 #----------------------------------------------------------------------------
 #funciones para los power up o colisiones
 func modificar_vida(cantidad: int):
-	vida_actual += cantidad
-	vida_actual = clamp(vida_actual, 0, vida_maxima)
-	barra_vida.value = vida_actual
+	# Modificamos el Global directamente
+	Global.vida_actual += cantidad
+	Global.vida_actual = clamp(Global.vida_actual, 0, Global.vida_maxima)
+	
+	barra_vida.value = Global.vida_actual
 	actualizar_vida()
-	if vida_actual <= 0:
+	
+	if Global.vida_actual <= 0:
 		morir()
 
 func modificar_energia(cantidad: float):
-	energia_actual += cantidad
-	energia_actual = clamp(energia_actual, 0, energia_maxima)
-	barra_energia.value = energia_actual
+	Global.energia_actual += cantidad
+	Global.energia_actual = clamp(Global.energia_actual, 0, Global.energia_maxima)
+	barra_energia.value = Global.energia_actual
 	actualizar_energia()
 
 func activar_escudo():
-	tiene_escudo = true
+	Global.tiene_escudo = true
 	escudo_imagen.visible = true 
 	
 func aplicar_veneno(duracion: float):
@@ -239,8 +236,8 @@ func sin_energia():
 	await get_tree().create_timer(0.5).timeout # Medio segundo de oscuridad total
 
 	global_position = checkpoint_position
-	energia_actual = energia_maxima
-	barra_energia.value = energia_actual
+	Global.energia_actual = Global.energia_maxima
+	barra_energia.value = Global.energia_actual
 	actualizar_energia()
 	
 	$CanvasLayer2/ColorRect.visible = false

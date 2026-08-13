@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://mvxjghvrh3h3"]
+
+[ext_resource type="Texture2D" uid="uid://wx31qsrmbel1" path="res://imagenes/fondo llegada.png" id="1_kpics"]
+[ext_resource type="PackedScene" uid="uid://bawx8viqhbc3v" path="res://MetaVictoria.tscn" id="2_wb4nc"]
+[ext_resource type="Script" uid="uid://ddu8mmaye1h5c" path="res://freno_camara.gd" id="3_8qeo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(63, 1084.5)
+
+[node name="Node2D" type="Node2D" unique_id=712232509]
+
+[node name="FondoLlegada" type="Sprite2D" parent="." unique_id=1713889279]
+texture = ExtResource("1_kpics")
+
+[node name="ZonaAbduccion" parent="." unique_id=108073805 instance=ExtResource("2_wb4nc")]
+position = Vector2(958, -14)
+
+[node name="FrenoCamara" type="Area2D" parent="." unique_id=1922513029]
+script = ExtResource("3_8qeo5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrenoCamara" unique_id=1028689480]
+position = Vector2(113, 3)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[connection signal="body_entered" from="FrenoCamara" to="FrenoCamara" method="_on_freno_camara_body_entered"]

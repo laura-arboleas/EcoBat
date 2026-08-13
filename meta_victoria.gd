@@ -1,7 +1,5 @@
 extends Area2D
 
-#@export var siguiente_nivel: String = "res://PantallaVictoria.tscn"
-
 func _on_body_entered(body):
 	# Verificamos si el que entró es el jugador
 	if body.has_method("ganar_nivel"):
