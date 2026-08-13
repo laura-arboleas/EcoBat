@@ -26,28 +26,28 @@ texture = ExtResource("2_rqk4w")
 
 [node name="Boton Salir" type="TextureButton" parent="." unique_id=1972737972]
 layout_mode = 0
-offset_left = 91.0
-offset_top = 833.0
-offset_right = 451.0
-offset_bottom = 953.0
+offset_left = 250.0
+offset_top = 919.0
+offset_right = 610.0
+offset_bottom = 1039.0
 texture_normal = ExtResource("3_p1jqd")
 texture_pressed = ExtResource("4_t73kw")
 
 [node name="Boton Reintentar" type="TextureButton" parent="." unique_id=1757257932]
 layout_mode = 0
-offset_left = 359.0
-offset_top = 665.0
-offset_right = 719.0
-offset_bottom = 785.0
+offset_left = 250.0
+offset_top = 620.0
+offset_right = 610.0
+offset_bottom = 740.0
 texture_normal = ExtResource("5_cc2e1")
 texture_pressed = ExtResource("6_t2qgj")
 
 [node name="MenuPrincipal" type="TextureButton" parent="." unique_id=1203150103]
 layout_mode = 0
-offset_left = 644.0
-offset_top = 833.0
-offset_right = 1004.0
-offset_bottom = 953.0
+offset_left = 250.0
+offset_top = 766.0
+offset_right = 610.0
+offset_bottom = 886.0
 texture_normal = ExtResource("7_odghq")
 texture_pressed = ExtResource("8_6h1ks")
 

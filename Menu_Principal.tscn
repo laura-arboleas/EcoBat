@@ -26,28 +26,28 @@ texture = ExtResource("1_v6bag")
 
 [node name="Boton Inicio" type="TextureButton" parent="." unique_id=1254903776]
 layout_mode = 0
-offset_left = 349.0
-offset_top = 634.0
-offset_right = 709.0
-offset_bottom = 754.0
+offset_left = 394.0
+offset_top = 600.0
+offset_right = 754.0
+offset_bottom = 720.0
 texture_normal = ExtResource("2_j47gm")
 texture_pressed = ExtResource("3_25kg1")
 
 [node name="Boton Salir" type="TextureButton" parent="." unique_id=1398843310]
 layout_mode = 0
-offset_left = 102.0
-offset_top = 815.0
-offset_right = 462.0
-offset_bottom = 935.0
+offset_left = 394.0
+offset_top = 896.0
+offset_right = 754.0
+offset_bottom = 1016.0
 texture_normal = ExtResource("4_unwvm")
 texture_pressed = ExtResource("5_bj1xx")
 
 [node name="Boton Ayuda" type="TextureButton" parent="." unique_id=1567044473]
 layout_mode = 0
-offset_left = 612.0
-offset_top = 808.0
-offset_right = 972.0
-offset_bottom = 928.0
+offset_left = 394.0
+offset_top = 749.0
+offset_right = 754.0
+offset_bottom = 869.0
 texture_normal = ExtResource("7_bj1xx")
 texture_pressed = ExtResource("8_14riu")
 

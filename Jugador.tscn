@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://b3ojgq2i4yiua" path="res://Celular.gd" id="9_ikhd1"]
 [ext_resource type="Texture2D" uid="uid://dtwod4suf7lht" path="res://imagenes/barra vida3.png" id="10_xsch2"]
 [ext_resource type="Texture2D" uid="uid://bkfvrwtm0m0xm" path="res://imagenes/vida.png" id="13_qhgme"]
+[ext_resource type="AudioStream" uid="uid://d1bw0m18lrttk" path="res://Audio/SFX/Colition_SFX_1.wav" id="13_su64b"]
 [ext_resource type="Texture2D" uid="uid://bl6mppj2m65g6" path="res://imagenes/eco1.png" id="14_6b1b7"]
 [ext_resource type="Texture2D" uid="uid://gde3fg5qgaqq" path="res://imagenes/eco2.png" id="15_qhgme"]
 [ext_resource type="Texture2D" uid="uid://dnsyvvikelvbe" path="res://imagenes/escudo.png" id="15_su64b"]
@@ -219,22 +220,7 @@ offset_bottom = 1072.0
 color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1587223318]
-
-[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1682288675]
-script = ExtResource("9_ikhd1")
-
-[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer3" unique_id=1300761262]
-offset_left = 1484.0001
-offset_top = 695.00006
-offset_right = 1524.0001
-offset_bottom = 735.00006
-scale = Vector2(3, 3)
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer3" unique_id=196220172]
-position = Vector2(78, 716)
-texture_normal = ExtResource("14_6b1b7")
-texture_pressed = ExtResource("15_qhgme")
-action = "Eco"
+stream = ExtResource("13_su64b")
 
 [node name="CirculoEco" type="CanvasLayer" parent="." unique_id=729134957]
 
@@ -246,3 +232,28 @@ offset_bottom = 1056.0
 fill_mode = 8
 texture_under = ExtResource("15_qhgme")
 texture_progress = ExtResource("14_6b1b7")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1682288675]
+script = ExtResource("9_ikhd1")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer3" unique_id=196220172]
+position = Vector2(78, 716)
+texture_normal = ExtResource("14_6b1b7")
+texture_pressed = ExtResource("15_qhgme")
+action = "Eco"
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer3" unique_id=1300761262]
+anchors_preset = -1
+anchor_left = 0.837
+anchor_top = 0.716
+anchor_right = 0.91
+anchor_bottom = 0.83300006
+offset_left = 65.95996
+offset_top = 59.71997
+offset_right = -74.20007
+offset_bottom = -66.640076
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(3, 3)
+joystick_mode = 1
+metadata/_edit_use_anchors_ = true

@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var barra_vida = $BarraVida/TextureProgressBar
 @onready var porcentaje_vida = $BarraVida/Porcentaje
 @onready var escudo_imagen = $BarraVida/Escudo
-#@onready var romper_Escudo = $AudioStreamPlayer
+@onready var romper_Escudo = $AudioStreamPlayer
 const Eco = preload("res://Eco.tscn")
 
 
@@ -116,7 +116,7 @@ func revisar_colisiones():
 		
 		if objeto_tocado.is_in_group("trampa"):
 			if Global.tiene_escudo:
-				#romper_Escudo.play()
+				romper_Escudo.play()
 				Global.tiene_escudo = false
 				es_invulnerable = true
 				await get_tree().create_timer(0.5).timeout
