@@ -138,8 +138,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
-radius = 49.00296
-height = 145.9864
+radius = 27.918583
+height = 97.74614
 
 [node name="Jugador" type="CharacterBody2D" unique_id=995713254 groups=["Jugador"]]
 script = ExtResource("1_pfvk3")
@@ -151,13 +151,11 @@ texture = SubResource("GradientTexture2D_13qdw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504 groups=["trampa"]]
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"colgado"
-frame = 1
-frame_progress = 0.2701355
+animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994921225]
-position = Vector2(8.000001, -0.99999976)
-rotation = 1.574005
+position = Vector2(30.000004, 6.000001)
+rotation = 1.0471976
 shape = SubResource("CapsuleShape2D_13qdw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=789283482]

@@ -10,5 +10,4 @@ func _on_body_entered(body):
 		tween.tween_callback(cambiar_pantalla)
 
 func cambiar_pantalla():
-	print("¡Nivel superado!")
 	get_tree().change_scene_to_file("res://Victoria.tscn")

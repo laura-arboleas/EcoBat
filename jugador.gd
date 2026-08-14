@@ -19,7 +19,7 @@ var speed = 350
 var speed_reverse = 250
 var gravity = 2500
 var resta_pasiva = 1.6
-var costo_eco = 20.0 
+var costo_eco = 15
 var recarga_colgado = 15.0
 var controles_invertidos = false
 
@@ -120,7 +120,7 @@ func revisar_colisiones():
 				romper_Escudo.play()
 				Global.tiene_escudo = false
 				es_invulnerable = true
-				await get_tree().create_timer(0.5).timeout
+				await get_tree().create_timer(1.0).timeout
 				es_invulnerable = false
 				escudo_imagen.visible = false
 				return
@@ -145,15 +145,11 @@ func recibir_golpe():
 	colision_audio.play()
 	velocity = Vector2.ZERO 
 	$AnimatedSprite2D.play("choque")
+	es_invulnerable = true
 	await get_tree().create_timer(1.0).timeout
 	esta_chocado = false
 	$AnimatedSprite2D.play("move")
-
-
-func agarrar_power():
-		
-	Global.energia_actual += 15
-	Global.energia_actual = clamp(Global.energia_actual, 0, Global.energia_maxima)
+	es_invulnerable = false
 
 func gestion_energia(delta):
 	if esta_colgado:
@@ -259,3 +255,7 @@ func actualizar_vida():
 
 func actualizar_energia():
 	porcentaje_energia.text = str(round(barra_energia.value)) + "%"
+func cambiar_color():
+	$PointLight2D.color = Color("00ea23")
+	await get_tree().create_timer(0.5).timeout
+	$PointLight2D.color = Color("#FFFFFF")

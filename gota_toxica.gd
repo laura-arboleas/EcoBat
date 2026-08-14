@@ -16,6 +16,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("modificar_vida"):
 		body.modificar_vida(-dano)
+		body.cambiar_color()
 	impactar()
 	
 func impactar() -> void:

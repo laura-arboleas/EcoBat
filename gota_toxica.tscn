@@ -21,8 +21,8 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xrivr"]
 gradient = SubResource("Gradient_84gfv")
 fill = 1
-fill_from = Vector2(0.53004295, 0.50429183)
-fill_to = Vector2(0.9306723, 0.17436975)
+fill_from = Vector2(0.51877934, 0.49530515)
+fill_to = Vector2(0.87558687, 0.10093897)
 
 [node name="gota_toxica" type="Area2D" unique_id=2013560160]
 script = ExtResource("1_tywfw")
@@ -38,7 +38,7 @@ shape = SubResource("CircleShape2D_xrivr")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=225661169]
 position = Vector2(-2, 0)
 scale = Vector2(3, 3)
-color = Color(1.2153015e-06, 0.44187424, 0.11059108, 1)
+color = Color(0, 0.91764706, 0.13725491, 1)
 texture = SubResource("GradientTexture2D_xrivr")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=735855262]
