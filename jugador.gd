@@ -6,7 +6,8 @@ extends CharacterBody2D
 @onready var barra_vida = $BarraVida/TextureProgressBar
 @onready var porcentaje_vida = $BarraVida/Porcentaje
 @onready var escudo_imagen = $BarraVida/Escudo
-@onready var romper_Escudo = $AudioStreamPlayer
+@onready var romper_Escudo = $escudo
+@onready var colision_audio = $choque
 const Eco = preload("res://Eco.tscn")
 
 
@@ -141,6 +142,7 @@ func recibir_golpe():
 	if esta_chocado:
 		return
 	esta_chocado = true
+	colision_audio.play()
 	velocity = Vector2.ZERO 
 	$AnimatedSprite2D.play("choque")
 	await get_tree().create_timer(1.0).timeout

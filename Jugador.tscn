@@ -16,6 +16,17 @@
 [ext_resource type="Texture2D" uid="uid://bl6mppj2m65g6" path="res://imagenes/eco1.png" id="14_6b1b7"]
 [ext_resource type="Texture2D" uid="uid://gde3fg5qgaqq" path="res://imagenes/eco2.png" id="15_qhgme"]
 [ext_resource type="Texture2D" uid="uid://dnsyvvikelvbe" path="res://imagenes/escudo.png" id="15_su64b"]
+[ext_resource type="AudioStream" uid="uid://d1ne5srhsec0j" path="res://Audio/SFX/Bat_wing_32kHz_16bit_1.wav" id="17_su64b"]
+
+[sub_resource type="Gradient" id="Gradient_pfvk3"]
+offsets = PackedFloat32Array(0, 0.5552147, 0.9723926)
+colors = PackedColorArray(1, 1, 1, 1, 0.681388, 0.681388, 0.681388, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_13qdw"]
+gradient = SubResource("Gradient_pfvk3")
+fill = 1
+fill_from = Vector2(0.52047783, 0.5)
+fill_to = Vector2(0.95051193, 0.2440273)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5j21"]
 atlas = ExtResource("2_ucnt4")
@@ -130,18 +141,13 @@ animations = [{
 radius = 49.00296
 height = 145.9864
 
-[sub_resource type="Gradient" id="Gradient_pfvk3"]
-offsets = PackedFloat32Array(0, 0.5552147, 0.9723926)
-colors = PackedColorArray(1, 1, 1, 1, 0.681388, 0.681388, 0.681388, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_13qdw"]
-gradient = SubResource("Gradient_pfvk3")
-fill = 1
-fill_from = Vector2(0.52047783, 0.5)
-fill_to = Vector2(0.95051193, 0.2440273)
-
 [node name="Jugador" type="CharacterBody2D" unique_id=995713254 groups=["Jugador"]]
 script = ExtResource("1_pfvk3")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=602070892]
+position = Vector2(-8.93751, -9.536743e-07)
+scale = Vector2(5.9707036, 4.796875)
+texture = SubResource("GradientTexture2D_13qdw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1274513504 groups=["trampa"]]
 sprite_frames = SubResource("SpriteFrames_xrivr")
@@ -157,11 +163,6 @@ shape = SubResource("CapsuleShape2D_13qdw")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=789283482]
 position = Vector2(207, 0)
 script = ExtResource("5_pclxs")
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=602070892]
-position = Vector2(-8.93751, -9.536743e-07)
-scale = Vector2(5.9707036, 4.796875)
-texture = SubResource("GradientTexture2D_13qdw")
 
 [node name="BarraEnergia" type="CanvasLayer" parent="." unique_id=1190772087]
 
@@ -228,7 +229,7 @@ offset_right = 1926.0
 offset_bottom = 1072.0
 color = Color(0, 0, 0, 1)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1587223318]
+[node name="escudo" type="AudioStreamPlayer" parent="." unique_id=1587223318]
 stream = ExtResource("13_su64b")
 
 [node name="CirculoEco" type="CanvasLayer" parent="." unique_id=729134957]
@@ -243,7 +244,6 @@ texture_under = ExtResource("15_qhgme")
 texture_progress = ExtResource("14_6b1b7")
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1682288675]
-visible = false
 script = ExtResource("9_ikhd1")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer3" unique_id=196220172]
@@ -252,18 +252,18 @@ texture_normal = ExtResource("14_6b1b7")
 texture_pressed = ExtResource("15_qhgme")
 action = "Eco"
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer3" unique_id=1300761262]
+[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer3" unique_id=1242355250]
 anchors_preset = -1
-anchor_left = 0.837
-anchor_top = 0.716
-anchor_right = 0.91
-anchor_bottom = 0.83300006
-offset_left = 65.95996
-offset_top = 59.71997
-offset_right = -74.20007
-offset_bottom = -66.640076
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(3, 3)
-joystick_mode = 1
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.874
+anchor_top = 0.83100003
+anchor_right = 0.89500004
+anchor_bottom = 0.869
+offset_left = -16.080078
+offset_top = -22.480042
+offset_right = -16.400024
+offset_bottom = -23.52002
+scale = Vector2(2, 2)
+
+[node name="choque" type="AudioStreamPlayer" parent="." unique_id=52453461]
+stream = ExtResource("17_su64b")
+volume_db = -5.0

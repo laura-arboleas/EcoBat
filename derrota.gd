@@ -4,7 +4,7 @@ extends Control
 func _ready() -> void:
 	# Si el juego se está ejecutando en la web (itch.io), ocultamos el botón
 	if OS.has_feature("web"):
-		$BotonSalir.visible = false
+		$"Boton Salir".visible = false
 	derrota.play()
 	
 func _on_boton_salir_pressed() -> void:
