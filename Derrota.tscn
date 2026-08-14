@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="7_6k0el"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="8_eoiid"]
 [ext_resource type="AudioStream" uid="uid://vrpoyneqcvvd" path="res://Audio/SFX/Lose_Game_SFX.wav" id="9_nhooj"]
-[ext_resource type="AudioStream" uid="uid://t6uad2rhyk2q" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="10_x17en"]
+[ext_resource type="AudioStream" uid="uid://b2a32v5fdvwh4" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="10_x17en"]
 
 [node name="Control" type="Control" unique_id=947294257]
 layout_mode = 3

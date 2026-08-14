@@ -8,6 +8,8 @@ func _ready() -> void:
 	derrota.play()
 	
 func _on_boton_salir_pressed() -> void:
+	seleccionar.play()
+	await seleccionar.finished
 	get_tree().quit()
 
 func _on_boton_reintentar_pressed() -> void:

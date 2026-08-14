@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd4p5f3g074g4" path="res://imagenes/CRÉDITOS.png" id="2_odpve"]
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="3_3d6ng"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="4_vwdfj"]
+[ext_resource type="AudioStream" uid="uid://b2a32v5fdvwh4" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="5_2e87f"]
 
 [node name="Control" type="Control" unique_id=1891504848]
 layout_mode = 3
@@ -28,5 +29,8 @@ offset_right = 1901.0
 offset_bottom = 1062.0
 texture_normal = ExtResource("3_3d6ng")
 texture_pressed = ExtResource("4_vwdfj")
+
+[node name="Select" type="AudioStreamPlayer" parent="." unique_id=1111784900]
+stream = ExtResource("5_2e87f")
 
 [connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b5jpa41inf2mv" path="res://imagenes/boton seguir1.png" id="6_67kmo"]
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="7_gvs5y"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="8_67kmo"]
-[ext_resource type="AudioStream" uid="uid://b4xi0kyt07ilh" path="res://Audio/UI_ SFX/UI_Select_2.1.wav" id="9_67kmo"]
+[ext_resource type="AudioStream" uid="uid://b2a32v5fdvwh4" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="9_67kmo"]
 
 [node name="Control" type="Control" unique_id=947294257]
 layout_mode = 3
