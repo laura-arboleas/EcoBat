@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djx77u3mpw5n1"]
 
-[ext_resource type="Script" uid="uid://cag5lddy4fg08" path="res://gota_toxica.gd" id="1_tywfw"]
+[ext_resource type="Script" uid="uid://cag5lddy4fg08" path="res://Obstaculos/gota_toxica.gd" id="1_tywfw"]
 [ext_resource type="Texture2D" uid="uid://cbyuj30cn563l" path="res://imagenes/gota.png" id="2_j0nl3"]
 [ext_resource type="AudioStream" uid="uid://bqiaank0lopl0" path="res://Audio/SFX/WaterDrop_SFX.wav" id="3_f5m5r"]
 

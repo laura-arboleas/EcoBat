@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfwt8h0lolc8r"]
 
-[ext_resource type="Script" uid="uid://3bgdj4h78w4t" path="res://violeta.gd" id="1_mty2u"]
+[ext_resource type="Script" uid="uid://3bgdj4h78w4t" path="res://Objetos/violeta.gd" id="1_mty2u"]
 [ext_resource type="Texture2D" uid="uid://dco08wmam0r2y" path="res://imagenes/bichito violeta.png" id="2_mty2u"]
 [ext_resource type="AudioStream" uid="uid://bqu5hsqm6yd6b" path="res://Audio/SFX/Bichito_SFX.wav" id="3_p643m"]
 

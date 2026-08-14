@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmggu2rsnv22v"]
 
 [ext_resource type="Texture2D" uid="uid://dt88awi7hj7p2" path="res://imagenes/ramita.png" id="1_grqsg"]
-[ext_resource type="Script" uid="uid://dnogqyfp4bq1f" path="res://rama.gd" id="1_ke0e1"]
+[ext_resource type="Script" uid="uid://dnogqyfp4bq1f" path="res://Objetos/rama.gd" id="1_ke0e1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(362, 100)

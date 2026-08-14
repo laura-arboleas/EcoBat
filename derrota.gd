@@ -17,7 +17,7 @@ func _on_boton_reintentar_pressed() -> void:
 		get_tree().change_scene_to_file(Global.ruta_nivel_actual)
 	else:
 		await seleccionar.finished
-		get_tree().change_scene_to_file("res://Juego.tscn")
+		get_tree().change_scene_to_file("res://Nivel1.tscn")
 
 
 func _on_menu_principal_pressed() -> void:

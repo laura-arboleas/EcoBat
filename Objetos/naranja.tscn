@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddmows08kge4f"]
 
-[ext_resource type="Script" uid="uid://d18or25fmfrot" path="res://naranja.gd" id="1_5ydqj"]
+[ext_resource type="Script" uid="uid://d18or25fmfrot" path="res://Objetos/naranja.gd" id="1_5ydqj"]
 [ext_resource type="Texture2D" uid="uid://cnmw4uii6hnu1" path="res://imagenes/bichito naranja.png" id="2_5ydqj"]
 [ext_resource type="AudioStream" uid="uid://bqu5hsqm6yd6b" path="res://Audio/SFX/Bichito_SFX.wav" id="3_s432p"]
 
@@ -33,9 +33,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
-radius = 21.0
-height = 62.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_gs3ip"]
+radius = 21.377558
 
 [sub_resource type="Gradient" id="Gradient_84gfv"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -55,7 +54,7 @@ animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1923926017]
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_xrivr")
+shape = SubResource("CircleShape2D_gs3ip")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1515888476]
 position = Vector2(-2, 0)

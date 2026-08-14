@@ -139,7 +139,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
 radius = 27.918583
-height = 97.74614
+height = 108.84541
 
 [node name="Jugador" type="CharacterBody2D" unique_id=995713254 groups=["Jugador"]]
 script = ExtResource("1_pfvk3")
@@ -154,8 +154,8 @@ sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994921225]
-position = Vector2(30.000004, 6.000001)
-rotation = 1.0471976
+position = Vector2(24, 5)
+rotation = 1.2217305
 shape = SubResource("CapsuleShape2D_13qdw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=789283482]

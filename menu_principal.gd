@@ -12,7 +12,7 @@ func _ready() -> void:
 func _on_boton_inicio_pressed() -> void:
 	seleccionar.play()
 	await seleccionar.finished
-	get_tree().change_scene_to_file("res://Juego.tscn")
+	get_tree().change_scene_to_file("res://Nivel1.tscn")
 
 
 func _on_boton_salir_pressed() -> void:

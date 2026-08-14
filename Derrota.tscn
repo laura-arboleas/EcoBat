@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dwp0r03whwnmg"]
 
-[ext_resource type="Script" uid="uid://5n0tv6ebetp1" path="res://derrota.gd" id="1_rqk4w"]
-[ext_resource type="Texture2D" uid="uid://cy30u3ftgx43h" path="res://imagenes/pantalla derrota.png" id="2_rqk4w"]
-[ext_resource type="Texture2D" uid="uid://c08ltsvpon7pn" path="res://imagenes/BOTON salir1.png" id="3_p1jqd"]
-[ext_resource type="Texture2D" uid="uid://csdffrjeq1q3y" path="res://imagenes/BOTON salir2.png" id="4_t73kw"]
-[ext_resource type="Texture2D" uid="uid://ustjf4wovtuh" path="res://imagenes/boton rejugar1.png" id="5_cc2e1"]
-[ext_resource type="Texture2D" uid="uid://d3o80pdtr8a5g" path="res://imagenes/boton rejugar2.png" id="6_t2qgj"]
-[ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="7_odghq"]
-[ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="8_6h1ks"]
-[ext_resource type="AudioStream" uid="uid://vrpoyneqcvvd" path="res://Audio/SFX/Lose_Game_SFX.wav" id="9_sgyx2"]
-[ext_resource type="AudioStream" uid="uid://t6uad2rhyk2q" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="10_p1jqd"]
+[ext_resource type="Script" uid="uid://5n0tv6ebetp1" path="res://derrota.gd" id="1_38wke"]
+[ext_resource type="Texture2D" uid="uid://cy30u3ftgx43h" path="res://imagenes/pantalla derrota.png" id="2_oqje2"]
+[ext_resource type="Texture2D" uid="uid://c08ltsvpon7pn" path="res://imagenes/BOTON salir1.png" id="3_7fuhv"]
+[ext_resource type="Texture2D" uid="uid://csdffrjeq1q3y" path="res://imagenes/BOTON salir2.png" id="4_pogt7"]
+[ext_resource type="Texture2D" uid="uid://ustjf4wovtuh" path="res://imagenes/boton rejugar1.png" id="5_15vmo"]
+[ext_resource type="Texture2D" uid="uid://d3o80pdtr8a5g" path="res://imagenes/boton rejugar2.png" id="6_85524"]
+[ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="7_6k0el"]
+[ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="8_eoiid"]
+[ext_resource type="AudioStream" uid="uid://vrpoyneqcvvd" path="res://Audio/SFX/Lose_Game_SFX.wav" id="9_nhooj"]
+[ext_resource type="AudioStream" uid="uid://t6uad2rhyk2q" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="10_x17en"]
 
 [node name="Control" type="Control" unique_id=947294257]
 layout_mode = 3
@@ -18,13 +18,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rqk4w")
+script = ExtResource("1_38wke")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1678248812]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_rqk4w")
+texture = ExtResource("2_oqje2")
 
 [node name="Boton Salir" type="TextureButton" parent="." unique_id=1972737972]
 layout_mode = 0
@@ -32,8 +32,8 @@ offset_left = 250.0
 offset_top = 919.0
 offset_right = 610.0
 offset_bottom = 1039.0
-texture_normal = ExtResource("3_p1jqd")
-texture_pressed = ExtResource("4_t73kw")
+texture_normal = ExtResource("3_7fuhv")
+texture_pressed = ExtResource("4_pogt7")
 
 [node name="Boton Reintentar" type="TextureButton" parent="." unique_id=1757257932]
 layout_mode = 0
@@ -41,8 +41,8 @@ offset_left = 250.0
 offset_top = 620.0
 offset_right = 610.0
 offset_bottom = 740.0
-texture_normal = ExtResource("5_cc2e1")
-texture_pressed = ExtResource("6_t2qgj")
+texture_normal = ExtResource("5_15vmo")
+texture_pressed = ExtResource("6_85524")
 
 [node name="MenuPrincipal" type="TextureButton" parent="." unique_id=1203150103]
 layout_mode = 0
@@ -50,14 +50,14 @@ offset_left = 250.0
 offset_top = 766.0
 offset_right = 610.0
 offset_bottom = 886.0
-texture_normal = ExtResource("7_odghq")
-texture_pressed = ExtResource("8_6h1ks")
+texture_normal = ExtResource("7_6k0el")
+texture_pressed = ExtResource("8_eoiid")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2127744119]
-stream = ExtResource("9_sgyx2")
+stream = ExtResource("9_nhooj")
 
 [node name="Select" type="AudioStreamPlayer" parent="." unique_id=1606404570]
-stream = ExtResource("10_p1jqd")
+stream = ExtResource("10_x17en")
 
 [connection signal="pressed" from="Boton Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Boton Reintentar" to="." method="_on_boton_reintentar_pressed"]

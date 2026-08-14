@@ -1,28 +1,28 @@
 [gd_scene format=4 uid="uid://cdn0v4h403xuk"]
 
-[ext_resource type="Texture2D" uid="uid://cyhjgsk6dncm7" path="res://imagenes/fondo.png" id="1_aio1g"]
-[ext_resource type="Script" uid="uid://d3nqr6glallub" path="res://juego.gd" id="1_rrymi"]
-[ext_resource type="PackedScene" uid="uid://dvacy053l8c65" path="res://Jugador.tscn" id="2_bgojs"]
-[ext_resource type="PackedScene" uid="uid://dmggu2rsnv22v" path="res://Rama.tscn" id="2_sbve1"]
-[ext_resource type="PackedScene" uid="uid://bfwt8h0lolc8r" path="res://violeta.tscn" id="3_aio1g"]
-[ext_resource type="Texture2D" uid="uid://cggt4i3pmbn3g" path="res://imagenes/piso con borde1.png" id="3_ecqux"]
-[ext_resource type="PackedScene" uid="uid://xi5mceotlt85" path="res://pinchos.tscn" id="3_upxd2"]
-[ext_resource type="Texture2D" uid="uid://bmhnhb7rqt1er" path="res://imagenes/piso irregular con borde.png" id="4_flld4"]
-[ext_resource type="Texture2D" uid="uid://cxmasytk1yhdq" path="res://imagenes/piso.png" id="5_fhirl"]
-[ext_resource type="PackedScene" uid="uid://cd1evulgjspf5" path="res://verde.tscn" id="6_bs78y"]
-[ext_resource type="Texture2D" uid="uid://jxpigy5lw0fv" path="res://imagenes/parte del medio.png" id="6_rrymi"]
-[ext_resource type="Texture2D" uid="uid://8tfyv6d3tgni" path="res://imagenes/piso irregular.png" id="7_cqgso"]
-[ext_resource type="PackedScene" uid="uid://wypdc02o74j" path="res://Telaraña.tscn" id="8_lym1s"]
-[ext_resource type="PackedScene" uid="uid://dlgqeu23n0pm1" path="res://pinchosAltos.tscn" id="9_flld4"]
-[ext_resource type="AudioStream" uid="uid://f2445frfcaq2" path="res://Audio/MFX/Main_them_Batboy_2.0.wav" id="16_116di"]
-[ext_resource type="PackedScene" uid="uid://ddmows08kge4f" path="res://naranja.tscn" id="18_gs3ip"]
-[ext_resource type="PackedScene" uid="uid://cjn044ue6rt43" path="res://amarillo.tscn" id="19_d5hcn"]
-[ext_resource type="PackedScene" uid="uid://mvxjghvrh3h3" path="res://Meta_Final.tscn" id="19_gs3ip"]
+[ext_resource type="Script" uid="uid://d3nqr6glallub" path="res://Nivel1.gd" id="1_noxbt"]
+[ext_resource type="Texture2D" uid="uid://cyhjgsk6dncm7" path="res://imagenes/fondo.png" id="2_w3kxv"]
+[ext_resource type="PackedScene" uid="uid://mvxjghvrh3h3" path="res://Meta_Final.tscn" id="3_2lvmi"]
+[ext_resource type="Texture2D" uid="uid://cggt4i3pmbn3g" path="res://imagenes/piso con borde1.png" id="4_wf1lk"]
+[ext_resource type="Texture2D" uid="uid://bmhnhb7rqt1er" path="res://imagenes/piso irregular con borde.png" id="5_bpvb4"]
+[ext_resource type="Texture2D" uid="uid://cxmasytk1yhdq" path="res://imagenes/piso.png" id="6_gxvts"]
+[ext_resource type="Texture2D" uid="uid://jxpigy5lw0fv" path="res://imagenes/parte del medio.png" id="7_wlfyn"]
+[ext_resource type="Texture2D" uid="uid://8tfyv6d3tgni" path="res://imagenes/piso irregular.png" id="8_b88dk"]
+[ext_resource type="PackedScene" uid="uid://dlgqeu23n0pm1" path="res://Obstaculos/pinchosAltos.tscn" id="9_77crl"]
+[ext_resource type="PackedScene" uid="uid://xi5mceotlt85" path="res://Obstaculos/pinchos.tscn" id="10_aout0"]
+[ext_resource type="PackedScene" uid="uid://dmggu2rsnv22v" path="res://Objetos/Rama.tscn" id="11_h0lng"]
+[ext_resource type="PackedScene" uid="uid://bfwt8h0lolc8r" path="res://Objetos/violeta.tscn" id="12_ldw2b"]
+[ext_resource type="PackedScene" uid="uid://cd1evulgjspf5" path="res://Objetos/verde.tscn" id="13_j0juc"]
+[ext_resource type="PackedScene" uid="uid://dvacy053l8c65" path="res://Jugador.tscn" id="14_1ixex"]
+[ext_resource type="PackedScene" uid="uid://wypdc02o74j" path="res://Obstaculos/Telaraña.tscn" id="15_f8y8v"]
+[ext_resource type="AudioStream" uid="uid://f2445frfcaq2" path="res://Audio/MFX/Main_them_Batboy_2.0.wav" id="16_beigf"]
+[ext_resource type="PackedScene" uid="uid://ddmows08kge4f" path="res://Objetos/naranja.tscn" id="17_w5lbn"]
+[ext_resource type="PackedScene" uid="uid://cjn044ue6rt43" path="res://Objetos/amarillo.tscn" id="18_mia6s"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bs78y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_116di"]
-texture = ExtResource("3_ecqux")
+texture = ExtResource("4_wf1lk")
 texture_region_size = Vector2i(239, 193)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -38,14 +38,14 @@ texture_region_size = Vector2i(239, 193)
 0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs3ip"]
-texture = ExtResource("4_flld4")
+texture = ExtResource("5_bpvb4")
 texture_region_size = Vector2i(645, 228)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-322.92874, -60.651596, -231.67815, -59.55877, -134.96344, -111.46779, -71.5798, -66.1157, -38.795166, -97.807526, -14.206665, -97.807526, 25.681305, -60.10518, 47.53775, -90.704185, 67.20853, -87.97213, 81.41522, -83.600845, 97.807526, -83.054436, 120.756775, -60.10518, 150.80936, -59.55877, 169.38736, -73.76545, 195.06863, -81.96161, 196.16147, -92.343414, 227.8533, -90.157776, 231.67813, -79.77597, 243.1528, -81.96161, 252.98819, -68.301346, 269.38052, -67.20852, 277.5767, -75.951096, 286.86563, -65.02288, 301.0723, -69.940575, 322.92874, -60.10518, 322.38235, 114.199844, -322.38232, 113.65343)
 0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-284.13358, -89.06495, -309.81488, -60.10518, -248.61688, -60.651596, -273.75177, -87.97213, -280.8551, -89.06495)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5hcn"]
-texture = ExtResource("5_fhirl")
+texture = ExtResource("6_gxvts")
 texture_region_size = Vector2i(240, 195)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -61,13 +61,13 @@ texture_region_size = Vector2i(240, 195)
 0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5pybx"]
-texture = ExtResource("6_rrymi")
+texture = ExtResource("7_wlfyn")
 texture_region_size = Vector2i(659, 165)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-301.07233, -34.697083, -269.92688, -45.625294, -254.6274, -55.46069, -208.18248, -71.3066, -169.93373, -51.635815, -84.14725, -71.85301, -62.83722, -58.19274, 2.7320557, -57.64633, 128.74402, -57.59601, 160.68805, -68.24401, 215.83224, -57.099922, 237.68869, -42.89324, 269.9269, -42.346832, 306.5364, 11.747833, 283.04074, 29.779388, 259.424, 50.819992, 168.432, 48.884003, 127.776, 79.859985, 107.0965, 51.635826, 61.197998, 51.08941, 50.269775, 43.43966, 18.577972, 45.078896, 3.8248596, 60.378395, -23.495667, 59.285576, -44.257874, 29.324175, -109.82855, 29.232979, -137.456, 28.556, -166.496, 55.65999, -188.75943, 29.631618, -218.01788, 29.779388, -255.1738, 36.33632, -307.08282, 22.129639, -326.7536, 3.0052567)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7uus"]
-texture = ExtResource("7_cqgso")
+texture = ExtResource("8_b88dk")
 texture_region_size = Vector2i(645, 232)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-321.8359, -62.564026, -307.08282, -62.564026, -278.66946, -92.070206, -248.61688, -61.4712, -231.13704, -61.504654, -133.87062, -115.019455, -72.12622, -68.02813, -33.877472, -101.359184, -15.2994995, -99.719955, 21.310028, -60.92479, 31.691525, -60.98131, 55.1875, -92.070206, 122.94241, -59.83197, 153.00436, -60.24378, 210.91458, -91.52379, 255.1738, -68.57454, 283.5872, -69.667366, 322.38235, -62.564026, 322.344, 117.612, -322.38232, 116.11229)
@@ -101,7 +101,7 @@ distance = 177.00282
 normal = Vector2(-0.99994093, 0.010868924)
 
 [node name="Juego" type="Node2D" unique_id=1491781558]
-script = ExtResource("1_rrymi")
+script = ExtResource("1_noxbt")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=2014703928]
 repeat_size = Vector2(1920, 0)
@@ -109,10 +109,10 @@ repeat_times = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=230192850]
 position = Vector2(-756, -531)
-texture = ExtResource("1_aio1g")
+texture = ExtResource("2_w3kxv")
 centered = false
 
-[node name="Final" parent="." unique_id=712232509 instance=ExtResource("19_gs3ip")]
+[node name="Final" parent="." unique_id=712232509 instance=ExtResource("3_2lvmi")]
 position = Vector2(9804, 7)
 
 [node name="Fondo" type="Node2D" parent="." unique_id=894719461]
@@ -161,62 +161,62 @@ shape = SubResource("WorldBoundaryShape2D_b1lj4")
 
 [node name="pinchos" type="Node2D" parent="Obstaculos" unique_id=1780001763]
 
-[node name="StaticBody2D11" parent="Obstaculos/pinchos" unique_id=1673379283 instance=ExtResource("9_flld4")]
+[node name="StaticBody2D11" parent="Obstaculos/pinchos" unique_id=1673379283 instance=ExtResource("9_77crl")]
 position = Vector2(129, 222)
 
-[node name="StaticBody2D12" parent="Obstaculos/pinchos" unique_id=828966894 instance=ExtResource("9_flld4")]
+[node name="StaticBody2D12" parent="Obstaculos/pinchos" unique_id=828966894 instance=ExtResource("9_77crl")]
 position = Vector2(4072, -66)
 
-[node name="StaticBody2D6" parent="Obstaculos/pinchos" unique_id=1964254288 instance=ExtResource("9_flld4")]
+[node name="StaticBody2D6" parent="Obstaculos/pinchos" unique_id=1964254288 instance=ExtResource("9_77crl")]
 position = Vector2(-43, -254)
 rotation = -3.1415925
 
-[node name="StaticBody2D7" parent="Obstaculos/pinchos" unique_id=968874797 instance=ExtResource("3_upxd2")]
+[node name="StaticBody2D7" parent="Obstaculos/pinchos" unique_id=968874797 instance=ExtResource("10_aout0")]
 position = Vector2(4670, 409)
 
-[node name="StaticBody2D8" parent="Obstaculos/pinchos" unique_id=943413378 instance=ExtResource("3_upxd2")]
+[node name="StaticBody2D8" parent="Obstaculos/pinchos" unique_id=943413378 instance=ExtResource("10_aout0")]
 position = Vector2(6457, -152)
 rotation = -3.1398914
 
-[node name="StaticBody2D9" parent="Obstaculos/pinchos" unique_id=677224332 instance=ExtResource("3_upxd2")]
+[node name="StaticBody2D9" parent="Obstaculos/pinchos" unique_id=677224332 instance=ExtResource("10_aout0")]
 position = Vector2(5859.0005, -376.00003)
 rotation = -3.1410904
 
-[node name="StaticBody2D10" parent="Obstaculos/pinchos" unique_id=1073444953 instance=ExtResource("9_flld4")]
+[node name="StaticBody2D10" parent="Obstaculos/pinchos" unique_id=1073444953 instance=ExtResource("9_77crl")]
 position = Vector2(7879, 240)
 
-[node name="StaticBody2D3" parent="Obstaculos/pinchos" unique_id=1657408830 instance=ExtResource("3_upxd2")]
+[node name="StaticBody2D3" parent="Obstaculos/pinchos" unique_id=1657408830 instance=ExtResource("10_aout0")]
 position = Vector2(908, 137)
 
-[node name="StaticBody2D2" parent="Obstaculos/pinchos" unique_id=1890733441 instance=ExtResource("3_upxd2")]
+[node name="StaticBody2D2" parent="Obstaculos/pinchos" unique_id=1890733441 instance=ExtResource("10_aout0")]
 position = Vector2(-4341, -189)
 rotation = -3.1415925
 
-[node name="StaticBody2D" parent="Obstaculos/pinchos" unique_id=2041160662 instance=ExtResource("3_upxd2")]
+[node name="StaticBody2D" parent="Obstaculos/pinchos" unique_id=2041160662 instance=ExtResource("10_aout0")]
 position = Vector2(-2723, 161)
 
-[node name="StaticBody2D4" parent="Obstaculos/pinchos" unique_id=1044678602 instance=ExtResource("9_flld4")]
+[node name="StaticBody2D4" parent="Obstaculos/pinchos" unique_id=1044678602 instance=ExtResource("9_77crl")]
 position = Vector2(-3706, 257)
 
-[node name="StaticBody2D5" parent="Obstaculos/pinchos" unique_id=509528343 instance=ExtResource("9_flld4")]
+[node name="StaticBody2D5" parent="Obstaculos/pinchos" unique_id=509528343 instance=ExtResource("9_77crl")]
 position = Vector2(-3360, 254)
 
-[node name="StaticBody2D13" parent="Obstaculos/pinchos" unique_id=1030491126 instance=ExtResource("9_flld4")]
+[node name="StaticBody2D13" parent="Obstaculos/pinchos" unique_id=1030491126 instance=ExtResource("9_77crl")]
 position = Vector2(1980, -192)
 rotation = -3.1415925
 
 [node name="rama" type="Node2D" parent="Obstaculos" unique_id=1682452924]
 
-[node name="StaticBody2D2" parent="Obstaculos/rama" unique_id=1378076397 instance=ExtResource("2_sbve1")]
+[node name="StaticBody2D2" parent="Obstaculos/rama" unique_id=1378076397 instance=ExtResource("11_h0lng")]
 position = Vector2(5256, -375)
 
-[node name="StaticBody2D" parent="Obstaculos/rama" unique_id=1011542782 instance=ExtResource("2_sbve1")]
+[node name="StaticBody2D" parent="Obstaculos/rama" unique_id=1011542782 instance=ExtResource("11_h0lng")]
 position = Vector2(-1606, -277)
 
 [node name="power-up" type="Node2D" parent="." unique_id=201560562]
 position = Vector2(310, 81)
 
-[node name="Area2D" parent="power-up" unique_id=2013560160 instance=ExtResource("3_aio1g")]
+[node name="Area2D" parent="power-up" unique_id=2013560160 instance=ExtResource("12_ldw2b")]
 position = Vector2(5523, -72)
 radio_x = 30.0
 radio_y = 30.0
@@ -225,10 +225,10 @@ velocidad_y = 4.0
 velocidad_pulso = 3.0
 energia_maxima_luz = 1.5
 
-[node name="Area2D2" parent="power-up" unique_id=303398772 instance=ExtResource("6_bs78y")]
+[node name="Area2D2" parent="power-up" unique_id=303398772 instance=ExtResource("13_j0juc")]
 position = Vector2(2913, -345)
 
-[node name="Jugador" parent="." unique_id=995713254 instance=ExtResource("2_bgojs")]
+[node name="Jugador" parent="." unique_id=995713254 instance=ExtResource("14_1ixex")]
 position = Vector2(-6052.001, -15.0000305)
 rotation = 0.00026619434
 scale = Vector2(0.9999998, 0.9999998)
@@ -236,19 +236,18 @@ scale = Vector2(0.9999998, 0.9999998)
 [node name="Telarañas" type="Node2D" parent="." unique_id=1570050498]
 position = Vector2(-1969, -323)
 
-[node name="StaticBody2D3" parent="Telarañas" unique_id=1043079483 instance=ExtResource("8_lym1s")]
+[node name="StaticBody2D3" parent="Telarañas" unique_id=1043079483 instance=ExtResource("15_f8y8v")]
 position = Vector2(1404, 84)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
-visible = false
 color = Color(0.032967977, 0.032967996, 0.032967962, 1)
 
 [node name="Musica_Fondo" type="AudioStreamPlayer" parent="." unique_id=1117576059]
-stream = ExtResource("16_116di")
+stream = ExtResource("16_beigf")
 volume_db = -15.0
 
-[node name="Area2D" parent="." unique_id=1558158116 instance=ExtResource("18_gs3ip")]
+[node name="Area2D" parent="." unique_id=1558158116 instance=ExtResource("17_w5lbn")]
 position = Vector2(-1223, -93)
 
-[node name="Area2D2" parent="." unique_id=672917208 instance=ExtResource("19_d5hcn")]
+[node name="Area2D2" parent="." unique_id=672917208 instance=ExtResource("18_mia6s")]
 position = Vector2(3756, 101)

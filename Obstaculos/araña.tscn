@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brr2d7yy1oxoq"]
 
-[ext_resource type="Script" uid="uid://5qm3l5k0hcvy" path="res://araña.gd" id="1_x8xdg"]
+[ext_resource type="Script" uid="uid://5qm3l5k0hcvy" path="res://Obstaculos/araña.gd" id="1_x8xdg"]
 [ext_resource type="Texture2D" uid="uid://d2ixbrjpi452o" path="res://imagenes/araña bajando.png" id="2_u3fns"]
 [ext_resource type="Texture2D" uid="uid://ct47ythqitnin" path="res://imagenes/arañita.png" id="3_vsiy8"]
 

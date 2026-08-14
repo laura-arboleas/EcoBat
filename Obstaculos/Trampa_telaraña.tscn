@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://f73iokaujhhw"]
 
-[ext_resource type="Script" uid="uid://ca4mbl3gnqo8y" path="res://trampa_telaraña.gd" id="1_027rf"]
+[ext_resource type="Script" uid="uid://ca4mbl3gnqo8y" path="res://Obstaculos/trampa_telaraña.gd" id="1_027rf"]
 [ext_resource type="Texture2D" uid="uid://bj0sfcvwf0mte" path="res://imagenes/telaraña.png" id="2_mfp38"]
-[ext_resource type="PackedScene" uid="uid://brr2d7yy1oxoq" path="res://araña.tscn" id="3_f381i"]
+[ext_resource type="PackedScene" uid="uid://brr2d7yy1oxoq" path="res://Obstaculos/araña.tscn" id="3_f381i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
 radius = 214.0

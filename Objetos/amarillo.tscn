@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjn044ue6rt43"]
 
-[ext_resource type="Script" uid="uid://bkojv1o72fwp2" path="res://amarillo.gd" id="1_7nl0x"]
+[ext_resource type="Script" uid="uid://bkojv1o72fwp2" path="res://Objetos/amarillo.gd" id="1_7nl0x"]
 [ext_resource type="Texture2D" uid="uid://cp3bjst6fnk01" path="res://imagenes/bichito amarillo.png" id="2_7nl0x"]
 [ext_resource type="AudioStream" uid="uid://bqu5hsqm6yd6b" path="res://Audio/SFX/Bichito_SFX.wav" id="3_y1efg"]
 
@@ -33,9 +33,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
-radius = 15.0
-height = 64.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_116di"]
+radius = 22.090721
 
 [sub_resource type="Gradient" id="Gradient_7nl0x"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -55,12 +54,12 @@ animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1923926017]
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_13qdw")
+shape = SubResource("CircleShape2D_116di")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=212482169]
 position = Vector2(-2, 0)
 scale = Vector2(2, 2)
-color = Color(0.76981527, 0.59797424, 0.44168767, 1)
+color = Color(0.78039217, 0.8392157, 0.39215687, 1)
 texture = SubResource("GradientTexture2D_y1efg")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=959632232]

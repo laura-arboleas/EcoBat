@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://7gsh34kre31d"]
 
-[ext_resource type="Script" uid="uid://d3nqr6glallub" path="res://juego.gd" id="1_rl8qe"]
+[ext_resource type="Script" uid="uid://d3nqr6glallub" path="res://Nivel1.gd" id="1_rl8qe"]
 [ext_resource type="Texture2D" uid="uid://cyhjgsk6dncm7" path="res://imagenes/fondo.png" id="2_p5bdg"]
 [ext_resource type="PackedScene" uid="uid://mvxjghvrh3h3" path="res://Meta_Final.tscn" id="3_p5bdg"]
 [ext_resource type="Texture2D" uid="uid://cggt4i3pmbn3g" path="res://imagenes/piso con borde1.png" id="4_p8kk5"]
@@ -8,17 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://cxmasytk1yhdq" path="res://imagenes/piso.png" id="6_gcc2i"]
 [ext_resource type="Texture2D" uid="uid://jxpigy5lw0fv" path="res://imagenes/parte del medio.png" id="7_wjvat"]
 [ext_resource type="Texture2D" uid="uid://8tfyv6d3tgni" path="res://imagenes/piso irregular.png" id="8_16syp"]
-[ext_resource type="PackedScene" uid="uid://dlgqeu23n0pm1" path="res://pinchosAltos.tscn" id="9_ck55o"]
-[ext_resource type="PackedScene" uid="uid://xi5mceotlt85" path="res://pinchos.tscn" id="10_4n56w"]
-[ext_resource type="PackedScene" uid="uid://dmggu2rsnv22v" path="res://Rama.tscn" id="11_0edkm"]
-[ext_resource type="PackedScene" uid="uid://bfwt8h0lolc8r" path="res://violeta.tscn" id="12_l065s"]
-[ext_resource type="PackedScene" uid="uid://cd1evulgjspf5" path="res://verde.tscn" id="13_0gt0o"]
+[ext_resource type="PackedScene" uid="uid://dlgqeu23n0pm1" path="res://Obstaculos/pinchosAltos.tscn" id="9_ck55o"]
+[ext_resource type="PackedScene" uid="uid://xi5mceotlt85" path="res://Obstaculos/pinchos.tscn" id="10_4n56w"]
+[ext_resource type="PackedScene" uid="uid://dmggu2rsnv22v" path="res://Objetos/Rama.tscn" id="11_0edkm"]
+[ext_resource type="PackedScene" uid="uid://bfwt8h0lolc8r" path="res://Objetos/violeta.tscn" id="12_l065s"]
+[ext_resource type="PackedScene" uid="uid://cd1evulgjspf5" path="res://Objetos/verde.tscn" id="13_0gt0o"]
 [ext_resource type="PackedScene" uid="uid://dvacy053l8c65" path="res://Jugador.tscn" id="14_ldd4w"]
-[ext_resource type="PackedScene" uid="uid://ddmows08kge4f" path="res://naranja.tscn" id="18_gb1um"]
-[ext_resource type="PackedScene" uid="uid://f73iokaujhhw" path="res://Trampa_telaraña.tscn" id="19_rl8qe"]
-[ext_resource type="PackedScene" uid="uid://cjn044ue6rt43" path="res://amarillo.tscn" id="19_vydqo"]
-[ext_resource type="PackedScene" uid="uid://bw18tunjdjvk2" path="res://Filtracion.tscn" id="20_p5bdg"]
-[ext_resource type="PackedScene" uid="uid://c586n7qy2subl" path="res://charco.tscn" id="21_cpo1y"]
+[ext_resource type="PackedScene" uid="uid://ddmows08kge4f" path="res://Objetos/naranja.tscn" id="18_gb1um"]
+[ext_resource type="PackedScene" uid="uid://f73iokaujhhw" path="res://Obstaculos/Trampa_telaraña.tscn" id="19_rl8qe"]
+[ext_resource type="PackedScene" uid="uid://cjn044ue6rt43" path="res://Objetos/amarillo.tscn" id="19_vydqo"]
+[ext_resource type="PackedScene" uid="uid://bw18tunjdjvk2" path="res://Obstaculos/Filtracion.tscn" id="20_p5bdg"]
+[ext_resource type="PackedScene" uid="uid://c586n7qy2subl" path="res://Obstaculos/charco.tscn" id="21_cpo1y"]
 [ext_resource type="AudioStream" uid="uid://f2445frfcaq2" path="res://Audio/MFX/Main_them_Batboy_2.0.wav" id="21_p8kk5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bs78y"]
@@ -146,6 +146,12 @@ position = Vector2(3962, 450)
 
 [node name="violeta" parent="Fondo" unique_id=2013560160 instance=ExtResource("12_l065s")]
 position = Vector2(3072, -1)
+radio_x = 30.0
+radio_y = 30.0
+velocidad_x = 3.0
+velocidad_y = 4.0
+velocidad_pulso = 3.0
+energia_maxima_luz = 1.5
 
 [node name="Area2D" parent="Fondo" unique_id=303398772 instance=ExtResource("19_vydqo")]
 position = Vector2(4515, 262)
@@ -243,6 +249,12 @@ position = Vector2(310, 81)
 
 [node name="Area2D" parent="power-up" unique_id=1520068847 instance=ExtResource("12_l065s")]
 position = Vector2(-829, 23)
+radio_x = 30.0
+radio_y = 30.0
+velocidad_x = 3.0
+velocidad_y = 4.0
+velocidad_pulso = 3.0
+energia_maxima_luz = 1.5
 
 [node name="Area2D2" parent="power-up" unique_id=765822528 instance=ExtResource("13_0gt0o")]
 position = Vector2(4058, -329)
@@ -256,7 +268,6 @@ scale = Vector2(0.9999998, 0.9999998)
 position = Vector2(-1969, -323)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1506591046]
-visible = false
 color = Color(0.032967977, 0.032967996, 0.032967962, 1)
 
 [node name="Area2D" parent="." unique_id=1558158116 instance=ExtResource("18_gb1um")]

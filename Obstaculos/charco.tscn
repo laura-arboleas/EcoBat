@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c586n7qy2subl"]
 
-[ext_resource type="Script" uid="uid://d357yi5tcoc3l" path="res://charco.gd" id="1_khsip"]
+[ext_resource type="Script" uid="uid://d357yi5tcoc3l" path="res://Obstaculos/charco.gd" id="1_khsip"]
 [ext_resource type="Texture2D" uid="uid://csh4cepe0khdm" path="res://imagenes/charco.png" id="1_p643w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khsip"]

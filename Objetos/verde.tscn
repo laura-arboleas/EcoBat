@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cd1evulgjspf5"]
 
-[ext_resource type="Script" uid="uid://dk2blns32xvhm" path="res://verde.gd" id="1_stwq8"]
+[ext_resource type="Script" uid="uid://dk2blns32xvhm" path="res://Objetos/verde.gd" id="1_stwq8"]
 [ext_resource type="Texture2D" uid="uid://dw8852y24mb5t" path="res://imagenes/bichito verde.png" id="2_stwq8"]
 [ext_resource type="AudioStream" uid="uid://b0i16mvouql8q" path="res://Audio/SFX/Lose_Game_2.wav" id="3_2184s"]
 
