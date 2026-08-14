@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3bfkfsfgswmd"]
 
 [ext_resource type="Script" uid="uid://cojexk0171mh1" path="res://ayuda.gd" id="1_odpve"]
-[ext_resource type="Texture2D" uid="uid://dd4p5f3g074g4" path="res://imagenes/CRÉDITOS.png" id="2_odpve"]
+[ext_resource type="Texture2D" uid="uid://bi2ap2mtmmc1" path="res://imagenes/creditos.png" id="2_2e87f"]
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="3_3d6ng"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="4_vwdfj"]
 [ext_resource type="AudioStream" uid="uid://b2a32v5fdvwh4" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="5_2e87f"]
@@ -19,14 +19,15 @@ script = ExtResource("1_odpve")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_odpve")
+scale = Vector2(1.065, 1.065)
+texture = ExtResource("2_2e87f")
 
 [node name="Volver" type="TextureButton" parent="." unique_id=648349587]
 layout_mode = 0
-offset_left = 1541.0
-offset_top = 942.0
-offset_right = 1901.0
-offset_bottom = 1062.0
+offset_left = 44.0
+offset_top = 910.0
+offset_right = 404.0
+offset_bottom = 1030.0
 texture_normal = ExtResource("3_3d6ng")
 texture_pressed = ExtResource("4_vwdfj")
 
