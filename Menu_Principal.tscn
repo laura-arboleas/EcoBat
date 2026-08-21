@@ -11,7 +11,8 @@
 [ext_resource type="AudioStream" uid="uid://bar2mirloqafm" path="res://Audio/UI_ SFX/UI_StartGame.wav" id="9_14riu"]
 [ext_resource type="Texture2D" uid="uid://pxojdowkuoog" path="res://imagenes/BOTON creditos1.png" id="10_x77py"]
 [ext_resource type="Texture2D" uid="uid://ccvyuw7eawhqk" path="res://imagenes/BOTON creditos2.png" id="11_tfjaa"]
-[ext_resource type="AudioStream" uid="uid://b2a32v5fdvwh4" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="12_tfjaa"]
+[ext_resource type="AudioStream" uid="uid://pt4b8kujs6ns" path="res://Audio/UI_ SFX/UI_Select_2.1 (1).wav" id="12_tfjaa"]
+[ext_resource type="AudioStream" uid="uid://dmy2jiinxab7m" path="res://Audio/MFX/Menú_theme_Batguy.wav" id="13_gpfpj"]
 
 [node name="Control" type="Control" unique_id=1186231906]
 layout_mode = 3
@@ -70,6 +71,9 @@ texture_pressed = ExtResource("11_tfjaa")
 [node name="Select" type="AudioStreamPlayer" parent="." unique_id=309005205]
 stream = ExtResource("12_tfjaa")
 volume_db = -5.0
+
+[node name="Musica_de_Fondo" type="AudioStreamPlayer" parent="." unique_id=819549885]
+stream = ExtResource("13_gpfpj")
 
 [connection signal="pressed" from="Boton Inicio" to="." method="_on_boton_inicio_pressed"]
 [connection signal="pressed" from="Boton Salir" to="." method="_on_boton_salir_pressed"]

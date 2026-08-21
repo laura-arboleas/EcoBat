@@ -6,11 +6,14 @@ extends Area2D
 @export var velocidad_x: float = 3.0
 @export var velocidad_y: float = 4.0
 
-# --- NUEVAS VARIABLES PARA LA LUZ ---
 @onready var luz = $PointLight2D # Asegúrate de que el nombre coincida con tu nodo
 @export var velocidad_pulso: float = 3.0 # Qué tan rápido parpadea
 @export var energia_maxima_luz: float = 1.5 # Qué tan brillante se pone al máximo
 @onready var comer_bicho = $comer
+
+# --- AUDIO DE APARICIÓN / LUZ ---
+@onready var audio_luz = $Volar
+
 var tiempo: float = 0.0
 var posicion_inicial: Vector2
 
@@ -30,10 +33,18 @@ func _process(delta: float):
 	var intensidad_suave = (sin(tiempo * velocidad_pulso) + 1.0) / 2.0
 	luz.energy = intensidad_suave * energia_maxima_luz
 	
+	if luz.energy > 0.2:
+		if not audio_luz.playing:
+			audio_luz.play()
+	else:
+		if audio_luz.playing:
+			audio_luz.stop()
 	
 func _on_body_entered(body):
 	if body.has_method("modificar_energia"):
 		body.modificar_energia(25.0) # Le cura 25 de energia
+		if audio_luz.playing:
+			audio_luz.stop()
 		comer_bicho.play()
 		$AnimatedSprite2D.visible = false
 		luz.visible = false

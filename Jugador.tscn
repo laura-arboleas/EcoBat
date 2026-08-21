@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://b3ojgq2i4yiua" path="res://Celular.gd" id="9_ikhd1"]
 [ext_resource type="Texture2D" uid="uid://dtwod4suf7lht" path="res://imagenes/barra vida3.png" id="10_xsch2"]
 [ext_resource type="Texture2D" uid="uid://bkfvrwtm0m0xm" path="res://imagenes/vida.png" id="13_qhgme"]
-[ext_resource type="AudioStream" uid="uid://c2ocxl6b6lcdd" path="res://Audio/SFX/Colition_SFX_1.wav" id="13_su64b"]
+[ext_resource type="AudioStream" uid="uid://bs0avvwfgmfaw" path="res://Audio/SFX/SFX_2.0/Shield_Crush_SFX.wav" id="13_su64b"]
 [ext_resource type="Texture2D" uid="uid://bl6mppj2m65g6" path="res://imagenes/eco1.png" id="14_6b1b7"]
 [ext_resource type="Texture2D" uid="uid://gde3fg5qgaqq" path="res://imagenes/eco2.png" id="15_qhgme"]
 [ext_resource type="Texture2D" uid="uid://dnsyvvikelvbe" path="res://imagenes/escudo.png" id="15_su64b"]

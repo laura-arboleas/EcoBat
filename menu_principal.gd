@@ -1,13 +1,14 @@
 extends Control
 
 @onready var seleccionar = $Select
-@onready var inicio = $AudioStreamPlayer
+
+@onready var fondo = $Musica_de_Fondo
 
 func _ready() -> void:
 	# Si el juego se está ejecutando en la web (itch.io), ocultamos el botón
 	if OS.has_feature("web"):
 		$"Boton Salir".visible = false
-	inicio.play()
+	fondo.play()
 		
 func _on_boton_inicio_pressed() -> void:
 	seleccionar.play()

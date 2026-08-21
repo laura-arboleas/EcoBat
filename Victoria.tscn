@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b5jpa41inf2mv" path="res://imagenes/boton seguir1.png" id="6_67kmo"]
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="7_gvs5y"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="8_67kmo"]
-[ext_resource type="AudioStream" uid="uid://b2a32v5fdvwh4" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="9_67kmo"]
+[ext_resource type="AudioStream" uid="uid://pt4b8kujs6ns" path="res://Audio/UI_ SFX/UI_Select_2.1 (1).wav" id="9_67kmo"]
+[ext_resource type="AudioStream" uid="uid://bar2mirloqafm" path="res://Audio/UI_ SFX/UI_StartGame.wav" id="10_i5dje"]
 
 [node name="Control" type="Control" unique_id=947294257]
 layout_mode = 3
@@ -54,6 +55,9 @@ texture_pressed = ExtResource("8_67kmo")
 
 [node name="Select" type="AudioStreamPlayer" parent="." unique_id=1446800682]
 stream = ExtResource("9_67kmo")
+
+[node name="Win" type="AudioStreamPlayer" parent="." unique_id=1247653528]
+stream = ExtResource("10_i5dje")
 
 [connection signal="pressed" from="Boton Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Boton Siguiente Nivel" to="." method="_on_boton_siguiente_nivel_pressed"]

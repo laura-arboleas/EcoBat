@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cdohs1f25bmgs" path="res://imagenes/pantalla ayuda.png" id="1_w45k5"]
 [ext_resource type="Texture2D" uid="uid://duy3rmt55gwt7" path="res://imagenes/boton volver1.png" id="2_j5q7l"]
 [ext_resource type="Texture2D" uid="uid://chkj0ldivaxku" path="res://imagenes/boton volver2.png" id="3_vspjj"]
-[ext_resource type="AudioStream" uid="uid://b2a32v5fdvwh4" path="res://Audio/UI_ SFX/UI_Select_2.wav" id="5_vspjj"]
+[ext_resource type="AudioStream" uid="uid://pt4b8kujs6ns" path="res://Audio/UI_ SFX/UI_Select_2.1 (1).wav" id="5_vspjj"]
 
 [node name="Control" type="Control" unique_id=1891504848]
 layout_mode = 3

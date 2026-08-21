@@ -1,12 +1,12 @@
 extends Control
 @onready var seleccionar = $Select
-#@onready var victoria = $AudioStreamPlayer
+@onready var victoria = $Win
 func _ready() -> void:
 	#var inicio = $AudioStreamPlayer2D
 	# Si el juego se está ejecutando en la web (itch.io), ocultamos el botón
 	if OS.has_feature("web"):
 		$"Boton Salir".visible = false
-	#victoria.play()
+	victoria.play()
 	
 func _on_boton_salir_pressed() -> void:
 	get_tree().quit()
