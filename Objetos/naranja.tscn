@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d18or25fmfrot" path="res://Objetos/naranja.gd" id="1_5ydqj"]
 [ext_resource type="Texture2D" uid="uid://cnmw4uii6hnu1" path="res://imagenes/bichito naranja.png" id="2_5ydqj"]
 [ext_resource type="AudioStream" uid="uid://bqu5hsqm6yd6b" path="res://Audio/SFX/Bichito_SFX.wav" id="3_s432p"]
+[ext_resource type="AudioStream" uid="uid://clpkicv2ghrwp" path="res://Audio/SFX/SFX_2.0/Bichito_Movimiento_SFX.wav" id="4_q36eh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s432p"]
 atlas = ExtResource("2_5ydqj")
@@ -69,5 +70,9 @@ enable_mode = 1
 
 [node name="comer" type="AudioStreamPlayer" parent="." unique_id=1937125466]
 stream = ExtResource("3_s432p")
+
+[node name="Volar" type="AudioStreamPlayer" parent="." unique_id=1383259267]
+stream = ExtResource("4_q36eh")
+volume_db = -15.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
